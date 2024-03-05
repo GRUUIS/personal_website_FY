@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <!-- comment  cmd +K+C -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="3d modeling, animation">
+        <meta name="description" content="Showing some models made before; hyperlink and iFrame to dukebox">
+        <title>projects</title>
+        <!--link to css file-->
+        <link rel="stylesheet" href="../css/style_01.css">
+    </head>
+
+    <body>
+        <header id="begin">
+            <h1>My Portfolio</h1>
+            <nav class="dropdown">
+                <button>navigation</button>
+                <div class="content_nav">
+                    <a href="../html/index.html" target="_self" alt="a link jumped to homepage">Homepage</a>
+                    <a href="../html/about_page.html" target="_self" alt="a link jumped to the about page">About Me</a>
+                    <a href="../html/project_page.html" target="_self" alt="a link jumped to the project page">Projects</a>
+                    <a href="../html/contact.html" target="_self" alt="a link jumped to the contact page">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+
+        <main>
+
+            <div class="grid-container">
+
+                <div class="grid-item" id="item1">
+                        <h2>Project Involved</h2>
+                        <audio  controls loop src="../audio/M18.flac" title="M18"></audio>
+                        <div class="part2">
+                            <!--list-->
+                            <div class="content_part2">
+                                <!-- List -->
+                                <p>Things I am trying to do:</p>
+                                <ul>
+                                    <li>Documentary</li>
+                                    <li>Arduino Projects</li>
+                                    <li>Web Development</li>
+                                </ul>
+                            </div>
+                        
+                                <!-- Table -->
+                                <table id="custom_table">
+                                    <tr>
+                                        <th>Tools</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Blender</td>
+                                        <td>Pt</td>
+                                        <td>Zbrush</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Procreate</td>
+                                        <td>Sketchbook</td>
+                                        <td>CSP</td>
+                                    </tr>
+                                </table>
+                        </div>
+                </div>
+
+                <div class="grid-item" id="gallery-grid">
+                    <section>
+                        <div class="part1">
+                            <h3>photo-gallery</h3>
+                            <div class="image-gallery">
+                                <div class="image">
+                                    <img src="../image/photo1.jpg" alt="Image 1">
+                                </div>
+                                <div class="image">
+                                    <img src="../image/photo2.jpg" alt="Image 2">
+                                </div>
+                                <div class="image">
+                                    <img src="../image/photo3.jpg" alt="Image 3">
+                                </div>
+                                <div class="image">
+                                    <img src="../image/DSC01462.JPG" alt="Image 4">
+                                </div>
+                            </div>
+                            <div class="image-gallery">
+                                <div class="image">
+                                    <img src="../image/photo5.jpg" alt="Image 5">
+                                </div>
+                                <div class="image">
+                                    <img src="../image/photo6.jpg" alt="Image 6">
+                                </div>
+                                <div class="image">
+                                    <img src="../image/photo7.jpg" alt="Image 7">
+                                </div>
+                                <div class="image">
+                                    <img src="../image/photo8.JPG" alt="Image 8">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="grid-item" id="subt">
+                    <h3>-3d modeling-</h3>
+                </div>
+                
+                <div class="grid-item" id="item2">
+                    <!--javascript-->
+                    <div class=".container">
+                        <img id="Kong" src="../image/amogus_x.png" title="Xiao Kong", alt="pic for Xiao Kong.ver1">
+                    </div>
+                    <button title="click for final version of Xiao Kong, double click to return" 
+                    onclick="ChangetoFinal()" ondblclick="BacktoIt()" 
+                    alt="XiaoKong was designed as a cartoon spaceship with blue colors">
+                    click/dbclick here</button>
+                    
+                    <script>
+                        function ChangetoFinal(){
+                            var change_image = document.getElementById("Kong");
+                            change_image.src="../image/front_01.png";
+                        }
+                            /*asked chatGPT and knew that i can change the image's src to change image though onclick*/
+                        
+                        function BacktoIt(){
+                            document.getElementById("Kong").src="../image/amogus_x.png";
+                        }
+                    </script>
+                    <br>
+                    <a href="https://zhtkzx.v-kf.com/index.php?m=home&c=Lists&a=index&tid=3" target="_blank" title="link to the website">
+                        [Link to the website of Zhuhai Aerospace Land]</a>
+                    <br>
+                    <br>
+                    <p>My first output as a modeling project</p>
+                    <p>Mascot design for Zhuhai Aerospace Land</p>
+                    <br>
+                    <p>-I think it's cute!-</p>
+                    <br>
+                    <div class="column">
+                        <img id="horse-in-grid" src="../image/jouba_pony_girl.png">
+                        <img id="horse-in-grid" src="../image/jouba_pony_girl.png">
+                        <img id="horse-in-grid" src="../image/jouba_pony_girl.png">
+                    </div>
+                </div>
+                
+                <div class="grid-item" id="item3">
+                    <img class="the_images" src="../image/test_4.png" title="Valkyrie" alt="it can be found under:the link to Dukebox">
+                </div>
+
+                <div class="grid-item" id="item6">
+                    <video controls loop src="../video/final_output10001-0600.mp4" alt="spinning donut"></video> 
+                </div>
+
+                <div class="grid-item" id="item5">
+                    <h4>View my practices in Dukebox:</h4>
+                    <iframe src="https://duke.box.com/s/p9us66acndcrz7a6leubf8jfaayp7xj4"></iframe>
+                    <p>Or visit Dukebox on site:
+                            <a href="https://duke.box.com/s/p9us66acndcrz7a6leubf8jfaayp7xj4" target="_blank" title="link to the Dukebox folder">
+                            click here</a>
+                    </p>
+                </div>
+            
+
+            </div>
+
+        </main>
+
+
+
+
+        <aside>
+            <div class="aside_up">
+                <a href="#begin">UP</a>
+            </div>
+        </aside>
+
+        <footer>
+            Author: Fan Yu <br>
+            &copy; 2023 copyright reserved<br>
+            <small><a href="mailto:fy57@duke.edu">fy57@duke.edu</a></small>
+        </footer>
+        
+    </body>
+</html>
