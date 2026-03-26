@@ -1,78 +1,403 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="homepage" content="the main site page with hyperlinks to about_projects_contact">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>homepage</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yu Fan's bilingual portfolio for multimedia design, creative technology, interactive media, and game-related roles.">
+    <title>Yu Fan | Multimedia Design Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/homepage.css">
+</head>
+<body data-lang="en" data-audience="recruiter" data-mode="design">
+    <header class="site-header" id="top">
+        <a class="brand" href="#top">
+            <span class="brand-mark">FY</span>
+            <span class="brand-text">Yu Fan</span>
+        </a>
 
-        <!--link to css file-->
-        <link rel="stylesheet" href="css/style_01.css">
-    </head>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="#about" data-en="About" data-zh="关于我">About</a>
+            <a href="#projects" data-en="Projects" data-zh="项目">Projects</a>
+            <a href="#timeline" data-en="Experience" data-zh="经历">Experience</a>
+            <a href="#contact" data-en="Contact" data-zh="联系">Contact</a>
+        </nav>
 
-    <body>
-        <header id="begin">
-            <h1>My Portfolio</h1>
-            <nav class="dropdown">
-                <button type="button">navigation</button>
-                <div class="content_nav">
-                    <a href="index.html" target="_self" alt="a link jumped to homepage">Homepage</a>
-                    <a href="html/about_page.html" target="_self" alt="a link jumped to the about page">Project</a>
-                    <a href="html/project_page.html" target="_self" alt="a link jumped to the project page">Class Related</a>
-                    <!-- <a href="../html/contact.html" target="_self" alt="a link jumped to the contact page">Contact</a> -->
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language">
+            <span data-en="中文" data-zh="EN">中文</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero section-shell">
+            <div class="hero-copy">
+                <p class="eyebrow" data-en="Multimedia design portfolio" data-zh="多媒体设计求职作品集">Multimedia design portfolio</p>
+                <h1 data-en="Designing interactive stories across game, VR, AI, and data." data-zh="用游戏、VR、AI 与数据可视化，设计可互动的叙事体验。">
+                    Designing interactive stories across game, VR, AI, and data.
+                </h1>
+                <p class="hero-summary" data-en="I am Yu Fan, a bilingual multimedia designer and creative technologist building projects that connect visual design, interactive systems, and playful learning." data-zh="我是俞帆，一名双语多媒体设计与创意技术实践者，正在构建连接视觉设计、交互系统与游戏化学习体验的项目。">
+                    I am Yu Fan, a bilingual multimedia designer and creative technologist building projects that connect visual design, interactive systems, and playful learning.
+                </p>
+
+                <div class="hero-tags">
+                    <span data-en="Multimedia Design" data-zh="多媒体设计">Multimedia Design</span>
+                    <span data-en="Creative Technology" data-zh="创意技术">Creative Technology</span>
+                    <span data-en="Game & VR" data-zh="游戏与 VR">Game & VR</span>
+                    <span data-en="Data Visualization" data-zh="数据可视化">Data Visualization</span>
                 </div>
-            </nav>
-        </header>
-    
-        <main>
-            <section class="theme">
-                <h2>About Me</h2>
-                <audio  controls autoplay loop src="audio/Toby Fox - Shop.mp3" title="Toby Fox - Shop"></audio>
-            
-                <br><img src = "image/hello.jpg" title="hi" alt="a pic saying hello">
-                <h3 id="special1">Greetings:)</h3>
-                <p id="special2">This is Fan Yu from class of 2025, <br>one DKUer majored in digital media.</p>
 
-            </section>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects" data-en="View selected work" data-zh="查看精选项目">View selected work</a>
+                    <a class="button button-secondary" href="#contact" data-en="Contact me" data-zh="联系我">Contact me</a>
+                </div>
 
-            <div id="together">
-                <aside class="part3">
-                    <h3>things I like:</h3>
-                    <ul id="like_aside">
-                        <li id="music">VOCALOID</li>
-                        <li id="tea">black tea</li>
-                        <li id="cute">Anything cute</li>
+                <div class="hero-links">
+                    <a href="docs/project-notes/AI_Tools_Assignment_2_Documentation_Fan_Yu.pdf" target="_blank" rel="noreferrer" data-en="AI tools notes" data-zh="AI 工具文档">AI tools notes</a>
+                    <a href="docs/project-notes/UE_Lighting_Journal_Part_2.pdf" target="_blank" rel="noreferrer" data-en="UE lighting notes" data-zh="UE 灯光文档">UE lighting notes</a>
+                    <a href="https://1drv.ms/f/c/c36e9619e10e3126/IgApsgmN_EwTTY_KfKOkx32nAQLKZS18Te5sC1dZT7fooZc?e=0hIjit" target="_blank" rel="noreferrer" data-en="Full video folder" data-zh="完整视频资料夹">Full video folder</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-card hero-card-main">
+                    <img src="image/projects/vr/VR_Unity_VolunteerRelated_01.png" alt="VR Unity volunteer project preview">
+                </div>
+                <div class="hero-card hero-card-small">
+                    <img src="image/projects/ue/UE_Blueprint_Piano_02.png" alt="UE blueprint piano preview">
+                </div>
+                <div class="hero-note">
+                    <span data-en="Now studying at PolyU IME" data-zh="目前就读于港理工 IME">Now studying at PolyU IME</span>
+                    <strong data-en="OpenXR, UE Blueprint, ComfyUI, Tableau" data-zh="OpenXR、UE 蓝图、ComfyUI、Tableau">OpenXR, UE Blueprint, ComfyUI, Tableau</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-picks section-shell">
+            <div class="panel">
+                <p class="eyebrow" data-en="Choose your path" data-zh="选择你的浏览路径">Choose your path</p>
+                <div class="audience-switch" aria-label="Audience switch">
+                    <button class="chip is-active" type="button" data-view-target="recruiter" data-en="Recruiter" data-zh="招聘者">Recruiter</button>
+                    <button class="chip" type="button" data-view-target="collaborator" data-en="Collaborator" data-zh="合作方">Collaborator</button>
+                    <button class="chip" type="button" data-view-target="explorer" data-en="Explorer" data-zh="同行 / 访客">Explorer</button>
+                </div>
+                <p class="focus-copy" id="focus-copy"></p>
+            </div>
+
+            <div class="panel mode-panel">
+                <p class="eyebrow" data-en="Toggle the lens" data-zh="切换观看视角">Toggle the lens</p>
+                <div class="mode-switch" aria-label="Mode switch">
+                    <button class="chip is-active" type="button" data-mode-target="design" data-en="Design mode" data-zh="设计模式">Design mode</button>
+                    <button class="chip" type="button" data-mode-target="tech" data-en="Tech mode" data-zh="技术模式">Tech mode</button>
+                </div>
+                <p class="mode-copy" id="mode-copy"></p>
+            </div>
+        </section>
+
+        <section class="about section-shell" id="about">
+            <div class="section-heading">
+                <p class="eyebrow" data-en="About" data-zh="关于我">About</p>
+                <h2 data-en="A profile built for stable job applications, but still personal." data-zh="一个更适合正式求职，同时保留个人风格的作品主页。">
+                    A profile built for stable job applications, but still personal.
+                </h2>
+            </div>
+
+            <div class="about-grid">
+                <article class="panel">
+                    <h3 data-en="Current positioning" data-zh="当前定位">Current positioning</h3>
+                    <p data-en="I focus on multimedia design roles that sit between visual storytelling, interactive systems, and technical implementation. My work spans Unity XR, UE Blueprint, generative workflows, sticker and visual design, and data storytelling." data-zh="我主要面向位于视觉叙事、交互系统与技术实现交叉点上的多媒体设计岗位。我的实践覆盖 Unity XR、UE 蓝图、生成式流程、贴纸与视觉设计，以及数据叙事。">
+                        I focus on multimedia design roles that sit between visual storytelling, interactive systems, and technical implementation. My work spans Unity XR, UE Blueprint, generative workflows, sticker and visual design, and data storytelling.
+                    </p>
+                </article>
+                <article class="panel">
+                    <h3 data-en="Education" data-zh="教育背景">Education</h3>
+                    <ul class="clean-list">
+                        <li data-en="Hong Kong Polytechnic University, MSc in Innovative Multimedia Entertainment, Sep 2025 - Mar 2027" data-zh="香港理工大学，创新多媒体娱乐理学硕士，2025.09 - 2027.03">Hong Kong Polytechnic University, MSc in Innovative Multimedia Entertainment, Sep 2025 - Mar 2027</li>
+                        <li data-en="Duke Kunshan University, BA in Digital Media Art, Aug 2021 - May 2025" data-zh="昆山杜克大学，数字媒体艺术本科，2021.08 - 2025.05">Duke Kunshan University, BA in Digital Media Art, Aug 2021 - May 2025</li>
+                        <li data-en="Duke University, Interdisciplinary Studies in Computation and Design" data-zh="杜克大学，计算与设计方向跨学科研究">Duke University, Interdisciplinary Studies in Computation and Design</li>
                     </ul>
-                </aside>
-
-
-                <section class="part">
-                    <h3>basic skills:</h3> 
-                    <p>3d modeling with Blender, Pt, and ZB; Python; digital paintings; html; Arduino; stop-motion animation.</p>
-                    <p>I'm now in the progress of learning data visualization...</p>
-                </section>
-
-                <article class="part3">
-                    <h3>hobbies:</h3>
-                    <p>animation; Fate is my favorite anime IP.</p>
-                    <p>Vtuber; fan of Nijisanji</p>
-                    <p>Stardew Valley</p>
-                    <p>Cyberpunk 2077</p>
-                    <p>Fate/Samurai Ramnant</p>
+                </article>
+                <article class="panel">
+                    <h3 data-en="Strengths" data-zh="优势关键词">Strengths</h3>
+                    <ul class="clean-list">
+                        <li data-en="Bilingual communication in Mandarin and English, with Japanese learning experience" data-zh="中英双语沟通，并具备日语学习与项目经验">Bilingual communication in Mandarin and English, with Japanese learning experience</li>
+                        <li data-en="Comfortable moving from concept sketches to implementation details" data-zh="能从概念构想到实际实现持续推进">Comfortable moving from concept sketches to implementation details</li>
+                        <li data-en="Interested in educational play, culture, and viewer interaction" data-zh="长期关注游戏化学习、文化表达与观众互动">Interested in educational play, culture, and viewer interaction</li>
+                    </ul>
                 </article>
             </div>
+        </section>
 
-            <div class="aside_up">
-                <a href="#begin">UP</a>
+        <section class="projects section-shell" id="projects">
+            <div class="section-heading">
+                <p class="eyebrow" data-en="Selected work" data-zh="精选项目">Selected work</p>
+                <h2 data-en="A portfolio shaped around creative technology and interactive media." data-zh="围绕创意技术与互动媒体组织的项目选集。">
+                    A portfolio shaped around creative technology and interactive media.
+                </h2>
             </div>
 
-        </main>
+            <div class="filter-bar" aria-label="Project filters">
+                <button class="chip is-active" type="button" data-filter="all" data-en="All" data-zh="全部">All</button>
+                <button class="chip" type="button" data-filter="vr" data-en="VR" data-zh="VR">VR</button>
+                <button class="chip" type="button" data-filter="game" data-en="Game" data-zh="游戏">Game</button>
+                <button class="chip" type="button" data-filter="ai" data-en="AI tools" data-zh="AI 工具">AI tools</button>
+                <button class="chip" type="button" data-filter="data" data-en="Data vis" data-zh="数据可视化">Data vis</button>
+                <button class="chip" type="button" data-filter="design" data-en="Design" data-zh="设计">Design</button>
+            </div>
 
+            <div class="project-grid">
+                <article class="project-card" data-category="vr game" data-priority-design="3" data-priority-tech="1">
+                    <img src="image/projects/vr/VR_Unity_VolunteerRelated_01.png" alt="VR Unity volunteer project scene">
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span data-en="VR / Unity OpenXR" data-zh="VR / Unity OpenXR">VR / Unity OpenXR</span>
+                            <span data-en="Volunteer project" data-zh="志愿项目">Volunteer project</span>
+                        </div>
+                        <h3 data-en="PolyU VR development support" data-zh="PolyU VR 开发支持">PolyU VR development support</h3>
+                        <p data-en="Research-center volunteer work exploring ceramic-themed interaction, OpenXR pipelines, and scene setup in VR environments." data-zh="在研究中心志愿项目中探索与陶瓷主题结合的交互、OpenXR 流程与 VR 场景搭建。">
+                            Research-center volunteer work exploring ceramic-themed interaction, OpenXR pipelines, and scene setup in VR environments.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Unity</li>
+                            <li>OpenXR</li>
+                            <li>AIGC</li>
+                            <li>Rigging</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="image/projects/vr/VR_Unity_VolunteerRelated_02_Rigging.png" target="_blank" rel="noreferrer" data-en="View rigging detail" data-zh="查看绑定细节">View rigging detail</a>
+                            <a href="image/projects/vr/VR_pianoKeys.png" target="_blank" rel="noreferrer" data-en="Open interaction shot" data-zh="查看交互截图">Open interaction shot</a>
+                        </div>
+                    </div>
+                </article>
 
-        <footer>
-            Author: Fan Yu <br>
-            &copy; 2024 copyright reserved<br>
-            <small><a href="mailto:fy57@duke.edu">fy57@duke.edu</a></small>
-        </footer>
-    </body>
-    </html>
+                <article class="project-card" data-category="game" data-priority-design="4" data-priority-tech="2">
+                    <img src="image/projects/ue/UE_Blueprint_Piano.png" alt="UE blueprint piano interface">
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span data-en="UE Blueprint" data-zh="UE 蓝图">UE Blueprint</span>
+                            <span data-en="Interactive systems" data-zh="交互系统">Interactive systems</span>
+                        </div>
+                        <h3 data-en="Blueprint piano experiments" data-zh="蓝图钢琴交互实验">Blueprint piano experiments</h3>
+                        <p data-en="A set of Unreal Engine studies focusing on Blueprint logic, piano interaction, and readable node-based workflows." data-zh="一组 Unreal Engine 学习实验，重点展示 Blueprint 逻辑、钢琴交互与可读性较强的节点流程。">
+                            A set of Unreal Engine studies focusing on Blueprint logic, piano interaction, and readable node-based workflows.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Unreal Engine</li>
+                            <li>Blueprint</li>
+                            <li>Interaction</li>
+                            <li>Node logic</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="image/projects/ue/UE_Blueprint_Piano_02.png" target="_blank" rel="noreferrer" data-en="View blueprint scene" data-zh="查看蓝图场景">View blueprint scene</a>
+                            <a href="image/projects/ue/UE_Blueprint_UseCodexWriteAToolToMakeLifeEasier.png" target="_blank" rel="noreferrer" data-en="View workflow image" data-zh="查看流程截图">View workflow image</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="game design" data-priority-design="2" data-priority-tech="4">
+                    <div class="project-poster text-poster">
+                        <span class="poster-chip">Unity</span>
+                        <strong data-en="Pixel Nihongo" data-zh="Pixel Nihongo">Pixel Nihongo</strong>
+                        <p data-en="Language learning through game systems" data-zh="以游戏机制承载语言学习">Language learning through game systems</p>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span data-en="Capstone" data-zh="毕业设计">Capstone</span>
+                            <span data-en="Game-based learning" data-zh="游戏化学习">Game-based learning</span>
+                        </div>
+                        <h3 data-en="Pixel Nihongo" data-zh="Pixel Nihongo">Pixel Nihongo</h3>
+                        <p data-en="An undergraduate capstone concept for Japanese language learning through adventure gameplay, answer-based combat, and pronunciation practice." data-zh="一个以日语学习为目标的本科毕业设计概念，结合冒险玩法、答题战斗与发音练习。">
+                            An undergraduate capstone concept for Japanese language learning through adventure gameplay, answer-based combat, and pronunciation practice.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Unity</li>
+                            <li>Learning design</li>
+                            <li>Game systems</li>
+                            <li>Voice practice</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="ai design" data-priority-design="5" data-priority-tech="3">
+                    <img src="image/projects/ai-tools/VibeCoding_ComfyUI.png" alt="Vibe coding and ComfyUI interface">
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span data-en="AI tools" data-zh="AI 工具">AI tools</span>
+                            <span data-en="Documentation" data-zh="过程文档">Documentation</span>
+                        </div>
+                        <h3 data-en="Vibe coding and ComfyUI notes" data-zh="Vibe Coding 与 ComfyUI 实验">Vibe coding and ComfyUI notes</h3>
+                        <p data-en="A process-focused project that combines generative workflows, tool experimentation, and reflective documentation for creative production." data-zh="一个强调过程的方法型项目，结合生成式工作流、工具实验与创作反思文档。">
+                            A process-focused project that combines generative workflows, tool experimentation, and reflective documentation for creative production.
+                        </p>
+                        <ul class="tag-list">
+                            <li>ComfyUI</li>
+                            <li>Prompting</li>
+                            <li>Workflow design</li>
+                            <li>Documentation</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="docs/project-notes/AI_Tools_Assignment_2_Documentation_Fan_Yu.pdf" target="_blank" rel="noreferrer" data-en="Read documentation" data-zh="阅读文档">Read documentation</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="data design" data-priority-design="1" data-priority-tech="5">
+                    <img src="image/sticker.png" alt="Sticker design preview">
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span data-en="Visual design" data-zh="视觉设计">Visual design</span>
+                            <span data-en="Student worker" data-zh="学生助理">Student worker</span>
+                        </div>
+                        <h3 data-en="Japanese course sticker system" data-zh="日语课程贴纸系统">Japanese course sticker system</h3>
+                        <p data-en="Sticker and promotional material design for DKU Japanese courses, balancing educational motivation with cultural references and print decisions." data-zh="为 DKU 日语课程设计贴纸与宣传物料，在学习激励、日本文化元素与印刷选择之间做平衡。">
+                            Sticker and promotional material design for DKU Japanese courses, balancing educational motivation with cultural references and print decisions.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Illustrator</li>
+                            <li>Print</li>
+                            <li>Visual identity</li>
+                            <li>Education</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="game data" data-priority-design="6" data-priority-tech="6">
+                    <div class="project-poster media-poster">
+                        <span class="poster-chip" data-en="External demo" data-zh="外链演示">External demo</span>
+                        <strong data-en="Pygame battle demo" data-zh="Pygame 战斗 Demo">Pygame battle demo</strong>
+                        <p data-en="Large video kept outside the landing page for performance." data-zh="为保证性能，大体积视频通过外链查看。">Large video kept outside the landing page for performance.</p>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span data-en="Prototype" data-zh="原型">Prototype</span>
+                            <span data-en="External media" data-zh="外部媒体">External media</span>
+                        </div>
+                        <h3 data-en="Interactive prototype and demo folder" data-zh="交互原型与演示资料">Interactive prototype and demo folder</h3>
+                        <p data-en="A playable prototype category represented here with a lightweight poster and a link to the full video folder rather than embedded media." data-zh="以轻量海报方式展示的交互原型类别，完整视频和较大媒体文件通过外链资料夹查看。">
+                            A playable prototype category represented here with a lightweight poster and a link to the full video folder rather than embedded media.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Pygame</li>
+                            <li>Gameplay</li>
+                            <li>Video demo</li>
+                            <li>Performance aware</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="https://1drv.ms/f/c/c36e9619e10e3126/IgApsgmN_EwTTY_KfKOkx32nAQLKZS18Te5sC1dZT7fooZc?e=0hIjit" target="_blank" rel="noreferrer" data-en="Open video folder" data-zh="打开视频资料夹">Open video folder</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="skills section-shell">
+            <div class="section-heading">
+                <p class="eyebrow" data-en="Skills" data-zh="技能">Skills</p>
+                <h2 data-en="Switching between design intent and technical execution." data-zh="在设计意图与技术实现之间切换，是我最稳定的工作方式。">
+                    Switching between design intent and technical execution.
+                </h2>
+            </div>
+
+            <div class="skills-grid">
+                <article class="panel skill-panel" data-skill-group="design">
+                    <h3 data-en="Design & creative tools" data-zh="设计与创意工具">Design & creative tools</h3>
+                    <p>Adobe Illustrator, Procreate, Procreate Dreams, Aseprite, Blender, DaVinci Resolve</p>
+                </article>
+                <article class="panel skill-panel" data-skill-group="tech">
+                    <h3 data-en="Programming & technical stack" data-zh="编程与技术栈">Programming & technical stack</h3>
+                    <p>HTML, CSS, JavaScript, Python, C, R, Stata, Arduino, Unity XR, UE Blueprint, OpenXR</p>
+                </article>
+                <article class="panel skill-panel" data-skill-group="hybrid">
+                    <h3 data-en="Hybrid strengths" data-zh="复合能力">Hybrid strengths</h3>
+                    <p data-en="ComfyUI workflows, game-based learning, visual communication, process documentation, and bilingual presentation." data-zh="ComfyUI 工作流、游戏化学习、视觉表达、过程文档整理，以及双语展示能力。">
+                        ComfyUI workflows, game-based learning, visual communication, process documentation, and bilingual presentation.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="timeline section-shell" id="timeline">
+            <div class="section-heading">
+                <p class="eyebrow" data-en="Timeline" data-zh="经历时间线">Timeline</p>
+                <h2 data-en="Education, projects, and signals of growth." data-zh="把教育、项目和能力增长信号放在同一条时间线上。">
+                    Education, projects, and signals of growth.
+                </h2>
+            </div>
+
+            <div class="timeline-list">
+                <article class="timeline-item">
+                    <span class="timeline-date">2025.09 - 2027.03</span>
+                    <div>
+                        <h3 data-en="Hong Kong Polytechnic University" data-zh="香港理工大学">Hong Kong Polytechnic University</h3>
+                        <p data-en="MSc in Innovative Multimedia Entertainment." data-zh="创新多媒体娱乐理学硕士。">MSc in Innovative Multimedia Entertainment.</p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-date">2025.10 - 2026.05</span>
+                    <div>
+                        <h3 data-en="VR development volunteer" data-zh="VR 开发志愿者">VR development volunteer</h3>
+                        <p data-en="Worked with VR interaction, ceramic-themed scenes, and OpenXR-oriented setup." data-zh="参与 VR 交互、陶瓷主题场景和 OpenXR 流程相关工作。">Worked with VR interaction, ceramic-themed scenes, and OpenXR-oriented setup.</p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-date">2024.08 - 2025.02</span>
+                    <div>
+                        <h3 data-en="Pixel Nihongo capstone" data-zh="Pixel Nihongo 毕业设计">Pixel Nihongo capstone</h3>
+                        <p data-en="Designed a playful learning loop that turns language progress into game interaction." data-zh="设计了一个将语言进步转化为游戏交互反馈的学习循环。">Designed a playful learning loop that turns language progress into game interaction.</p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-date">2024.02 - 2025.02</span>
+                    <div>
+                        <h3 data-en="Creative video and visual design work" data-zh="创意视频与视觉设计工作">Creative video and visual design work</h3>
+                        <p data-en="Led student video production tasks and designed sticker materials for course communication." data-zh="负责学生视频制作协作，并为课程传播设计贴纸物料。">Led student video production tasks and designed sticker materials for course communication.</p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <span class="timeline-date">2023 - 2026</span>
+                    <div>
+                        <h3 data-en="Signals of growth" data-zh="成长信号">Signals of growth</h3>
+                        <p data-en="Dean's List, scholarship support, TOEFL 96, CET-4 618, Tencent game-art related learning." data-zh="院长名录、奖学金支持、TOEFL 96、四级 618，以及腾讯游戏美术相关学习经历。">Dean's List, scholarship support, TOEFL 96, CET-4 618, Tencent game-art related learning.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact section-shell" id="contact">
+            <div class="section-heading">
+                <p class="eyebrow" data-en="Contact" data-zh="联系">Contact</p>
+                <h2 data-en="Open to multimedia design, creative technology, and interactive media opportunities." data-zh="正在寻找多媒体设计、创意技术与互动媒体相关机会。">
+                    Open to multimedia design, creative technology, and interactive media opportunities.
+                </h2>
+            </div>
+
+            <div class="contact-grid">
+                <article class="panel">
+                    <h3 data-en="Direct contact" data-zh="直接联系">Direct contact</h3>
+                    <ul class="clean-list">
+                        <li><a href="mailto:yufanz1114@outlook.com">yufanz1114@outlook.com</a></li>
+                        <li><a href="tel:+8615190062311">+86 15190062311</a></li>
+                        <li data-en="Suzhou / Hong Kong" data-zh="苏州 / 中国香港">Suzhou / Hong Kong</li>
+                    </ul>
+                </article>
+                <article class="panel">
+                    <h3 data-en="Portfolio trail" data-zh="作品入口">Portfolio trail</h3>
+                    <div class="card-actions vertical-actions">
+                        <a href="html/about_page.html" data-en="Browse archived art page" data-zh="查看旧版艺术页面">Browse archived art page</a>
+                        <a href="html/project_page.html" data-en="Browse archived project page" data-zh="查看旧版项目页面">Browse archived project page</a>
+                        <a href="docs/project-notes/UE_Lighting_Journal_Part_2.pdf" target="_blank" rel="noreferrer" data-en="Read UE lighting journal" data-zh="阅读 UE 灯光文档">Read UE lighting journal</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p data-en="Built as a bilingual portfolio homepage for stable job applications and memorable viewer interaction." data-zh="这个双语首页为更稳定的求职投递而设计，同时保留与访客互动的空间。">
+            Built as a bilingual portfolio homepage for stable job applications and memorable viewer interaction.
+        </p>
+    </footer>
+
+    <script src="js/homepage.js"></script>
+</body>
+</html>
