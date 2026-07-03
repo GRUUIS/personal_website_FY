@@ -1,409 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yu Fan's bilingual portfolio for multimedia design, creative technology, interactive media, and game-related roles.">
-    <title>Yu Fan | Multimedia Design Portfolio</title>
+    <meta name="description" content="俞帆的游戏策划、关卡设计、XR开发与多媒体娱乐作品集。">
+    <title>Fan Yu | Game & XR Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/homepage.css">
 </head>
-<body data-lang="en" data-audience="recruiter" data-mode="design">
+<body data-lang="zh">
     <header class="site-header" id="top">
-        <a class="brand" href="#top">
-            <span class="brand-mark">FY</span>
-            <span class="brand-text"> Fan Yu</span>
-        </a>
-
-        <nav class="site-nav" aria-label="Primary">
-            <a href="#about" data-en="About" data-zh="关于我">About</a>
-            <a href="#projects" data-en="Projects" data-zh="项目">Projects</a>
-            <a href="#timeline" data-en="Experience" data-zh="经历">Experience</a>
-            <a href="#archive" data-en="Archive" data-zh="视觉档案">Archive</a>
-            <a href="#contact" data-en="Contact" data-zh="联系">Contact</a>
+        <a class="brand" href="#top" aria-label="Fan Yu home">FAN YU.</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="#profile" data-en="PROFILE" data-zh="概况">概况</a>
+            <a href="#projects" data-en="WORK" data-zh="作品">作品</a>
+            <a href="#gameplay" data-en="GAMEPLAY" data-zh="游戏经历">游戏经历</a>
+            <a href="#skills" data-en="SKILLS" data-zh="技能">技能</a>
+            <a href="#contact" data-en="CONTACT" data-zh="联系">联系</a>
+            <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language">EN</button>
         </nav>
-
-        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language">
-            <span id="lang-toggle-label">中文</span>
-        </button>
     </header>
 
     <main>
-        <section class="hero section-shell">
-            <div class="hero-copy">
-                <p class="eyebrow" data-en="Multimedia design portfolio" data-zh="多媒体设计求职作品集">Multimedia design portfolio</p>
-                <h1 data-en="Designing interactive stories across game, VR, AI, and data." data-zh="用游戏、VR、AI 与数据可视化，设计可互动的叙事体验。">Designing interactive stories across game, VR, AI, and data.</h1>
-                <p class="hero-summary" data-en="I am Fan Yu, a bilingual multimedia designer and creative technologist building projects that connect visual design, interactive systems, playful learning, and technical execution." data-zh="我是俞帆，一名双语多媒体设计与创意技术实践者，正在构建连接视觉设计、交互系统、游戏化学习和技术实现的项目。">I am Fan Yu, a bilingual multimedia designer and creative technologist building projects that connect visual design, interactive systems, playful learning, and technical execution.</p>
-
-                <div class="hero-tags">
-                    <span data-en="Multimedia Design" data-zh="多媒体设计">Multimedia Design</span>
-                    <span data-en="Creative Technology" data-zh="创意技术">Creative Technology</span>
-                    <span data-en="Game & VR" data-zh="游戏与 VR">Game & VR</span>
-                    <span data-en="Data Visualization" data-zh="数据可视化">Data Visualization</span>
-                </div>
-
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#projects" data-en="View selected work" data-zh="查看精选项目">View selected work</a>
-                    <a class="button button-secondary" href="#contact" data-en="Contact me" data-zh="联系我">Contact me</a>
-                </div>
-
-                <div class="hero-links">
-                    <a href="https://www.bilibili.com/video/BV16ZV1z7EMt/?share_source=copy_web&vd_source=bcd733a58b551ab66d529da37b8fefb5" target="_blank" rel="noreferrer" data-en="Pixel Nihongo video" data-zh="Pixel Nihongo 视频">Pixel Nihongo video</a>
-                    <a href="docs/project-notes/AI_Tools_Assignment_2_Documentation_Fan_Yu.pdf" target="_blank" rel="noreferrer" data-en="AI tools notes" data-zh="AI 工具文档">AI tools notes</a>
-                    <a href="https://1drv.ms/f/c/c36e9619e10e3126/IgApsgmN_EwTTY_KfKOkx32nAQLKZS18Te5sC1dZT7fooZc?e=0hIjit" target="_blank" rel="noreferrer" data-en="Onedrive folder" data-zh="Onedrive资料夹">Onedrive folder</a>
-                </div>
-            </div>
-
-            <div class="hero-visual">
-                <div class="hero-card hero-card-main">
-                    <img src="image/hero/PixelNihongoImg1.png" alt="Pixel Nihongo hero preview">
-                </div>
-                <div class="hero-card hero-card-small">
-                    <img src="image/projects/ue/UE_Blueprint_Piano_02.png" alt="UE blueprint piano preview">
-                </div>
-                <div class="hero-note">
-                    <span data-en="Now studying at PolyU MSc of Innovative Multimedia Entertainment" data-zh="目前就读于港理工创新多媒体娱乐专业">Now studying at PolyU Innovative Multimedia Entertainment</span>
-                    <strong data-en="Unity, UE Blueprint, Multimedia Design" data-zh="Unity、UE 蓝图、多媒体设计">Unity, UE Blueprint, Multimedia Design</strong>
-                </div>
+        <section class="hero">
+            <p class="eyebrow" data-en="Game design / XR development / Creative technology" data-zh="游戏策划 / XR开发 / 创意技术">游戏策划 / XR开发 / 创意技术</p>
+            <h1 aria-label="Fan Yu">
+                <span>FAN</span>
+                <span class="outline">YU</span>
+                <span>.</span>
+            </h1>
+            <p class="hero-subtitle" data-en="I build playable prototypes, VR interactions, level analyses, and narrative systems across Unity, Unreal Engine, and AIGC workflows." data-zh="我围绕 Unity、Unreal Engine 与 AIGC 工作流，制作可玩的游戏原型、VR交互、关卡拆解和叙事系统。">
+                我围绕 Unity、Unreal Engine 与 AIGC 工作流，制作可玩的游戏原型、VR交互、关卡拆解和叙事系统。
+            </p>
+            <div class="hero-actions">
+                <a class="text-link" href="#projects" data-en="Selected work" data-zh="查看作品">查看作品</a>
+                <a class="text-link" href="https://github.com/GRUUIS" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="text-link" href="https://space.bilibili.com/48692225" target="_blank" rel="noreferrer">Bilibili</a>
             </div>
         </section>
 
-        <section class="quick-picks section-shell">
-            <div class="panel">
-                <p class="eyebrow" data-en="Choose your path" data-zh="选择你的浏览路径">Choose your path</p>
-                <div class="audience-switch" aria-label="Audience switch">
-                    <button class="chip is-active" type="button" data-view-target="recruiter" data-en="Recruiter" data-zh="招聘者">Recruiter</button>
-                    <button class="chip" type="button" data-view-target="collaborator" data-en="Collaborator" data-zh="合作方">Collaborator</button>
-                    <button class="chip" type="button" data-view-target="explorer" data-en="Explorer" data-zh="同行 / 访客">Explorer</button>
-                </div>
-                <p class="focus-copy" id="focus-copy"></p>
-            </div>
-
-            <div class="panel mode-panel">
-                <p class="eyebrow" data-en="Toggle the lens" data-zh="切换观看视角">Toggle the lens</p>
-                <div class="mode-switch" aria-label="Mode switch">
-                    <button class="chip is-active" type="button" data-mode-target="design" data-en="Design mode" data-zh="设计模式">Design mode</button>
-                    <button class="chip" type="button" data-mode-target="tech" data-en="Tech mode" data-zh="技术模式">Tech mode</button>
-                </div>
-                <p class="mode-copy" id="mode-copy"></p>
-            </div>
-        </section>
-
-        <section class="about section-shell" id="about">
-            <div class="section-heading">
-                <p class="eyebrow" data-en="About" data-zh="关于我">About</p>
-                <h2 data-en="A profile built for stable job applications, but still personal." data-zh="一个更适合正式求职，同时保留个人风格的作品主页。">A profile built for stable job applications, but still personal.</h2>
-            </div>
-
-            <div class="about-grid">
-                <article class="panel">
-                    <h3 data-en="Current positioning" data-zh="当前定位">Current positioning</h3>
-                    <p data-en="I focus on multimedia design roles between visual storytelling, interactive systems, and technical implementation. My work spans Unity XR, UE Blueprint, generative workflows, visual design, and data storytelling." data-zh="我主要面向位于视觉叙事、交互系统与技术实现交叉点上的多媒体设计岗位。我的实践覆盖 Unity XR、UE 蓝图、生成式流程、视觉设计，以及数据叙事。">I focus on multimedia design roles between visual storytelling, interactive systems, and technical implementation. My work spans Unity XR, UE Blueprint, generative workflows, visual design, and data storytelling.</p>
+        <section class="availability section-shell" id="profile">
+            <div class="section-kicker" data-en="Application Snapshot" data-zh="求职信息">求职信息</div>
+            <div class="stat-grid">
+                <article>
+                    <span data-en="Earliest Start" data-zh="最早入职">最早入职</span>
+                    <strong>2026.09.01</strong>
                 </article>
-                <article class="panel">
-                    <h3 data-en="Education" data-zh="教育背景">Education</h3>
+                <article>
+                    <span data-en="Internship Length" data-zh="实习时长">实习时长</span>
+                    <strong data-en="6+ months" data-zh="6个月以上">6个月以上</strong>
+                </article>
+                <article>
+                    <span data-en="Attendance" data-zh="每周出勤">每周出勤</span>
+                    <strong data-en="5 days / week" data-zh="5天 / 周">5天 / 周</strong>
+                </article>
+                <article>
+                    <span data-en="Direction" data-zh="意向方向">意向方向</span>
+                    <strong data-en="Level / System Design" data-zh="关卡 / 系统策划">关卡 / 系统策划</strong>
+                </article>
+            </div>
+        </section>
+
+        <section class="profile section-shell">
+            <div class="split-heading">
+                <p class="eyebrow" data-en="About" data-zh="关于">关于</p>
+                <h2 data-en="A game-facing designer with hands-on engine experience." data-zh="面向游戏岗位，同时具备引擎实作经验的复合型设计者。">面向游戏岗位，同时具备引擎实作经验的复合型设计者。</h2>
+            </div>
+            <div class="profile-grid">
+                <article class="text-panel">
+                    <h3 data-en="Current Focus" data-zh="当前定位">当前定位</h3>
+                    <p data-en="I am currently studying Innovative Multimedia Entertainment at The Hong Kong Polytechnic University. My work connects game-based learning, XR interaction, level design, system thinking, and production-oriented documentation." data-zh="我目前就读于香港理工大学创新多媒体娱乐硕士项目。作品和经历集中在游戏化学习、XR交互、关卡设计、系统思维，以及面向协作生产的过程文档。">
+                        我目前就读于香港理工大学创新多媒体娱乐硕士项目。作品和经历集中在游戏化学习、XR交互、关卡设计、系统思维，以及面向协作生产的过程文档。
+                    </p>
+                </article>
+                <article class="text-panel">
+                    <h3 data-en="Education" data-zh="教育背景">教育背景</h3>
                     <ul class="clean-list">
-                        <li data-en="Hong Kong Polytechnic University, MSc in Innovative Multimedia Entertainment, Sep 2025 - Mar 2027" data-zh="香港理工大学，创新多媒体娱乐理学硕士，2025.09 - 2027.03">Hong Kong Polytechnic University, MSc in Innovative Multimedia Entertainment, Sep 2025 - Mar 2027</li>
-                        <li data-en="Duke Kunshan University, BA in Digital Media Art, Aug 2021 - May 2025" data-zh="昆山杜克大学，数字媒体艺术本科，2021.08 - 2025.05">Duke Kunshan University, BA in Digital Media Art, Aug 2021 - May 2025</li>
-                        <li data-en="Duke University, Interdisciplinary Studies in Computation and Design" data-zh="杜克大学，计算与设计方向跨学科研究">Duke University, Interdisciplinary Studies in Computation and Design</li>
+                        <li data-en="The Hong Kong Polytechnic University, MSc Innovative Multimedia Entertainment, 2025.09 - 2027.05, GPA 3.6/4" data-zh="香港理工大学，创新多媒体娱乐硕士，2025.09 - 2027.05，GPA 3.6/4">香港理工大学，创新多媒体娱乐硕士，2025.09 - 2027.05，GPA 3.6/4</li>
+                        <li data-en="Duke University, BA Digital Media / Interdisciplinary Studies, 2021.08 - 2025.05, GPA 3.5/4" data-zh="Duke University，数字媒体 / 跨学科研究本科，2021.08 - 2025.05，GPA 3.5/4">Duke University，数字媒体 / 跨学科研究本科，2021.08 - 2025.05，GPA 3.5/4</li>
+                        <li data-en="Duke Kunshan University, Digital Media, top 20%, GPA 3.59/4" data-zh="昆山杜克大学，数字媒体本科，前20%，GPA 3.59/4">昆山杜克大学，数字媒体本科，前20%，GPA 3.59/4</li>
                     </ul>
                 </article>
-                <article class="panel">
-                    <h3 data-en="Strengths" data-zh="优势关键词">Strengths</h3>
+                <article class="text-panel">
+                    <h3 data-en="Experience & Awards" data-zh="经历与奖项">经历与奖项</h3>
                     <ul class="clean-list">
-                        <li data-en="Bilingual communication in Mandarin and English, with Japanese learning experience" data-zh="中英双语沟通，并具备日语学习与项目经验">Bilingual communication in Mandarin and English, with Japanese learning experience</li>
-                        <li data-en="Comfortable moving from concept sketches to implementation details" data-zh="能从概念构想到实际实现持续推进">Comfortable moving from concept sketches to implementation details</li>
-                        <li data-en="Interested in educational play, culture, and viewer interaction" data-zh="长期关注游戏化学习、文化表达与观众互动">Interested in educational play, culture, and viewer interaction</li>
+                        <li data-en="XR Development Intern, PolyU Research Centre for Cultural and Art Technology, 2026.07 - 2026.08" data-zh="香港理工大学文化和艺术科技研究中心 XR开发实习生，2026.07 - 2026.08">香港理工大学文化和艺术科技研究中心 XR开发实习生，2026.07 - 2026.08</li>
+                        <li data-en="PolyU AIGC Cantonese porcelain VR project volunteer, Unity VR / Meta SDK / API integration" data-zh="香港理工大学 AIGC瓷器VR项目志愿者，参与 Unity VR、Meta SDK 与 API 接入">香港理工大学 AIGC瓷器VR项目志愿者，参与 Unity VR、Meta SDK 与 API 接入</li>
+                        <li data-en="Entrance scholarship, Dean's List, TOEFL 96" data-zh="入学奖学金、Dean's List、TOEFL 96">入学奖学金、Dean's List、TOEFL 96</li>
                     </ul>
                 </article>
             </div>
         </section>
 
         <section class="projects section-shell" id="projects">
-            <div class="section-heading">
-                <p class="eyebrow" data-en="Selected work" data-zh="精选项目">Selected work</p>
-                <h2 data-en="A portfolio shaped around creative technology and interactive media." data-zh="围绕创意技术与互动媒体组织的项目选集。">A portfolio shaped around creative technology and interactive media.</h2>
+            <div class="split-heading">
+                <p class="eyebrow" data-en="Selected Work" data-zh="精选作品">精选作品</p>
+                <h2 data-en="Game prototypes, XR production, and level-design research." data-zh="游戏原型、XR制作与关卡策划研究。">游戏原型、XR制作与关卡策划研究。</h2>
             </div>
 
             <div class="filter-bar" aria-label="Project filters">
-                <button class="chip is-active" type="button" data-filter="all" data-en="All" data-zh="全部">All</button>
-                <button class="chip" type="button" data-filter="vr" data-en="VR" data-zh="VR">VR</button>
-                <button class="chip" type="button" data-filter="game" data-en="Game" data-zh="游戏">Game</button>
-                <button class="chip" type="button" data-filter="ai" data-en="AI tools" data-zh="AI 工具">AI tools</button>
-                <button class="chip" type="button" data-filter="data" data-en="Data vis" data-zh="数据可视化">Data vis</button>
-                <button class="chip" type="button" data-filter="design" data-en="Design" data-zh="设计">Design</button>
+                <button class="filter-button is-active" type="button" data-filter="all" data-en="All" data-zh="全部">全部</button>
+                <button class="filter-button" type="button" data-filter="game" data-en="Game" data-zh="游戏">游戏</button>
+                <button class="filter-button" type="button" data-filter="xr" data-en="XR" data-zh="XR">XR</button>
+                <button class="filter-button" type="button" data-filter="level" data-en="Level Design" data-zh="关卡">关卡</button>
+                <button class="filter-button" type="button" data-filter="ai" data-en="AI" data-zh="AI">AI</button>
+            </div>
+
+            <div class="feature-project">
+                <img src="image/hero/PixelNihongoImg1.png" alt="Pixel Nihongo gameplay preview">
+                <div>
+                    <p class="eyebrow">Capstone / Unity / Aseprite</p>
+                    <h3 data-en="Pixel Nihongo: game-based Japanese learning" data-zh="毕业设计 Pixel Nihongo：电子游戏与语言习得的结合">毕业设计 Pixel Nihongo：电子游戏与语言习得的结合</h3>
+                    <p data-en="A solo undergraduate demo inspired by Chants of Sennaar and Octopath Traveler. It combines HD-2D pixel visuals, Japanese verb-conjugation combat, vocabulary learning, speech-recognition pronunciation practice, and cultural context." data-zh="本科毕设单人 demo，从《巴别塔圣歌》和《歧路旅人》中汲取灵感，尝试将 HD-2D 像素视觉、日语动词变式战斗、词汇学习、语音识别发音练习与文化语境整合成可玩的学习体验。">
+                        本科毕设单人 demo，从《巴别塔圣歌》和《歧路旅人》中汲取灵感，尝试将 HD-2D 像素视觉、日语动词变式战斗、词汇学习、语音识别发音练习与文化语境整合成可玩的学习体验。
+                    </p>
+                    <a class="text-link" href="https://www.bilibili.com/video/BV16ZV1z7EMt/?share_source=copy_web&vd_source=bcd733a58b551ab66d529da37b8fefb5" target="_blank" rel="noreferrer" data-en="Watch demo" data-zh="观看演示">观看演示</a>
+                </div>
             </div>
 
             <div class="project-grid">
-                <article class="project-card" data-category="vr game" data-priority-design="3" data-priority-tech="1">
-                    <img src="image/projects/vr/VR_Unity_VolunteerRelated_00.png" alt="VR Unity volunteer project cover">
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span data-en="VR / Unity OpenXR" data-zh="VR / Unity OpenXR">VR / Unity OpenXR</span>
-                            <span data-en="Volunteer project" data-zh="志愿项目">Volunteer project</span>
-                        </div>
-                        <h3 data-en="PolyU VR development support" data-zh="PolyU VR 开发支持">PolyU VR development support</h3>
-                        <p data-en="Research-center volunteer work exploring ceramic-themed interaction, OpenXR pipelines, MetaSDK integration, and scene setup in VR environments." data-zh="在研究中心志愿项目中探索与陶瓷主题结合的交互、OpenXR 流程、MetaSDK 接入与 VR 场景搭建。">Research-center volunteer work exploring ceramic-themed interaction, OpenXR pipelines, MetaSDK integration, and scene setup in VR environments.</p>
-                        <ul class="tag-list">
-                            <li>Unity</li>
-                            <li>OpenXR</li>
-                            <li>MetaSDK</li>
-                            <li>AIGC</li>
-                            <li>Rigging</li>
-                        </ul>
-                        <div class="card-actions">
-                            <a href="image/projects/vr/VR_Unity_VolunteerRelated_01.png" target="_blank" rel="noreferrer" data-en="Open scene shot" data-zh="查看场景截图">Open scene shot</a>
-                            <a href="image/projects/vr/VR_Unity_VolunteerRelated_02_Rigging.png" target="_blank" rel="noreferrer" data-en="View rigging detail" data-zh="查看绑定细节">View rigging detail</a>
-                        </div>
+                <article class="project-card" data-category="xr ai">
+                    <img src="image/projects/vr/VR_Unity_VolunteerRelated_00.png" alt="Unity VR project">
+                    <div>
+                        <span class="project-type">XR / Unity</span>
+                        <h3 data-en="AIGC Cantonese porcelain in VR" data-zh="香港理工大学文化与科技研究中心 AIGC瓷器VR项目">香港理工大学文化与科技研究中心 AIGC瓷器VR项目</h3>
+                        <p data-en="Unity VR collaboration using Meta SDK for virtual keyboard input, character setup, MR hand-tracking model replacement, rigging, and API integration." data-zh="Unity VR 项目协作，主要使用 Meta SDK 制作虚拟键盘输入、虚拟角色、MR手部追踪模型更换与骨骼绑定，并参与 API 接入。">Unity VR 项目协作，主要使用 Meta SDK 制作虚拟键盘输入、虚拟角色、MR手部追踪模型更换与骨骼绑定，并参与 API 接入。</p>
+                        <a href="https://github.com/GRUUIS/UnityVRDevelopment" target="_blank" rel="noreferrer">GitHub</a>
                     </div>
                 </article>
 
-                <article class="project-card" data-category="game" data-priority-design="4" data-priority-tech="2">
-                    <img src="image/projects/ue/UE_Blueprint_Piano.png" alt="UE blueprint piano interface">
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span data-en="UE Blueprint" data-zh="UE 蓝图">UE Blueprint</span>
-                            <span data-en="Interactive systems" data-zh="交互系统">Interactive systems</span>
-                        </div>
-                        <h3 data-en="Blueprint creation" data-zh="蓝图交互制作">Blueprint creation</h3>
-                        <p data-en="A set of Unreal Engine studies focusing on Blueprint logic, piano interaction, readable node-based workflows, and early-level learning outcomes." data-zh="一组 Unreal Engine 学习实验，重点展示 Blueprint 逻辑、钢琴交互、可读性较强的节点流程，以及本科阶段的阶段性成果。">A set of Unreal Engine studies focusing on Blueprint logic, piano interaction, readable node-based workflows, and early-level learning outcomes.</p>
-                        <ul class="tag-list">
-                            <li>Unreal Engine</li>
-                            <li>Blueprint</li>
-                            <li>Interaction</li>
-                            <li>Lighting</li>
-                            <li>Node logic</li>
-                        </ul>
-                        <div class="card-actions">
-                            <a href="image/projects/ue/UE_Blueprint_UseCodexWriteAToolToMakeLifeEasier.png" target="_blank" rel="noreferrer" data-en="View work with Codex" data-zh="查看Codex快速绑定按键">View work with Codex</a>
-                            <a href="https://www.bilibili.com/video/BV1FNVzz8E5e/?share_source=copy_web&amp;vd_source=bcd733a58b551ab66d529da37b8fefb5" target="_blank" rel="noreferrer" data-en="Watch UE learning demo" data-zh="观看 UE 学习成品">Watch UE learning demo</a>
-                        </div>
+                <article class="project-card" data-category="xr game">
+                    <img src="image/projects/ue/VR_pianoKeys.png" alt="PhilosopherVR piano interaction">
+                    <div>
+                        <span class="project-type">UE / OpenXR</span>
+                        <h3>PhilosopherVR</h3>
+                        <p data-en="Master-stage graduation project. I build UE Blueprint logic for VR interactions including piano buttons, correctness checks, audio playback, text display, controller vibration, trophy prompts, and dynamic material instances." data-zh="硕士阶段毕业设计。负责 UE Blueprint VR 交互逻辑，包括钢琴按钮、检查对错、播放音频、显示文本、手柄震动、奖杯拾取提示和 Dynamic Material Instance 应用。">硕士阶段毕业设计。负责 UE Blueprint VR 交互逻辑，包括钢琴按钮、检查对错、播放音频、显示文本、手柄震动、奖杯拾取提示和 Dynamic Material Instance 应用。</p>
+                        <a href="https://github.com/GRUUIS/PhilosophyVR_544" target="_blank" rel="noreferrer">GitHub</a>
                     </div>
                 </article>
 
-                <article class="project-card" data-category="game design" data-priority-design="2" data-priority-tech="4">
-                    <img src="image/projects/game-prototype/PixelNihongoImg.png" alt="Pixel Nihongo project preview">
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span data-en="Capstone" data-zh="毕业设计">Capstone</span>
-                            <span data-en="Game-based learning" data-zh="游戏化学习">Game-based learning</span>
-                        </div>
-                        <h3 data-en="Pixel Nihongo" data-zh="Pixel Nihongo">Pixel Nihongo</h3>
-                        <p data-en="An undergraduate capstone for Japanese language learning through adventure gameplay, answer-based combat, and pronunciation practice in a Unity-built world." data-zh="一个以日语学习为目标的本科毕业设计，结合冒险玩法、答题战斗与发音练习，并以 Unity 世界观承载学习体验。">An undergraduate capstone for Japanese language learning through adventure gameplay, answer-based combat, and pronunciation practice in a Unity-built world.</p>
-                        <ul class="tag-list">
-                            <li>Unity</li>
-                            <li>Learning design</li>
-                            <li>Game systems</li>
-                            <li>Voice practice</li>
-                        </ul>
-                        <div class="card-actions">
-                            <a href="https://www.bilibili.com/video/BV16ZV1z7EMt/?share_source=copy_web&amp;vd_source=bcd733a58b551ab66d529da37b8fefb5" target="_blank" rel="noreferrer" data-en="Watch Pixel Nihongo demo" data-zh="观看 Pixel Nihongo 演示">Watch Pixel Nihongo demo</a>
-                        </div>
+                <article class="project-card" data-category="level game">
+                    <div class="poster">
+                        <strong data-en="WINNING IS THE TRAP" data-zh="赢了一把">赢了一把</strong>
+                    </div>
+                    <div>
+                        <span class="project-type" data-en="Game Jam / Level Design" data-zh="Game Jam / 关卡策划">Game Jam / 关卡策划</span>
+                        <h3 data-en="Winning Once" data-zh="赢了一把">赢了一把</h3>
+                        <p data-en="A 10-15 minute first-person puzzle/resource-management level set in a late-night pachinko hall. The surface goal is to earn chips and open the exit; the real goal is to recognize the win-induced trap, keep real resources, and find a non-gambling exit." data-zh="Game Jam 单人开发概念，10-15分钟第一人称解谜 / 资源管理 / 叙事压力关卡。表层目标是赚够筹码打开出口，真实目标是识别“赢钱诱导”，保留现实资源并找到非赌博出口。">Game Jam 单人开发概念，10-15分钟第一人称解谜 / 资源管理 / 叙事压力关卡。表层目标是赚够筹码打开出口，真实目标是识别“赢钱诱导”，保留现实资源并找到非赌博出口。</p>
                     </div>
                 </article>
 
-                <article class="project-card" data-category="ai design" data-priority-design="5" data-priority-tech="3">
-                    <img src="image/projects/ai-tools/VibeCoding_ComfyUI.png" alt="Vibe coding and ComfyUI interface">
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span data-en="AI tools" data-zh="AI 工具">AI tools</span>
-                            <span data-en="Documentation" data-zh="过程文档">Documentation</span>
-                        </div>
-                        <h3 data-en="Vibe coding and ComfyUI notes" data-zh="Vibe Coding 与 ComfyUI 实验">Vibe coding and ComfyUI notes</h3>
-                        <p data-en="A process-focused project combining generative workflows, tool experimentation, and reflective documentation for creative production." data-zh="一个强调过程的方法型项目，结合生成式工作流、工具实验与创作反思文档。">A process-focused project combining generative workflows, tool experimentation, and reflective documentation for creative production.</p>
-                        <ul class="tag-list">
-                            <li>ComfyUI</li>
-                            <li>Prompting</li>
-                            <li>Workflow design</li>
-                            <li>Documentation</li>
-                        </ul>
-                        <div class="card-actions">
-                            <a href="docs/project-notes/AI_Tools_Assignment_2_Documentation_Fan_Yu.pdf" target="_blank" rel="noreferrer" data-en="Read documentation" data-zh="阅读文档">Read documentation</a>
-                        </div>
+                <article class="project-card" data-category="level game">
+                    <img src="image/projects/ue/UE_Blueprint_Piano_02.png" alt="Unreal Engine blueprint work">
+                    <div>
+                        <span class="project-type" data-en="UE / Sequencer" data-zh="UE / Sequencer">UE / Sequencer</span>
+                        <h3 data-en="Millennium UE short film" data-zh="千禧年 UE短片">千禧年 UE短片</h3>
+                        <p data-en="Level dressing, Blueprint setup, Niagara effects, and Sequencer camera movement for an Unreal Engine short-film workflow." data-zh="负责关卡搭建、蓝图设置、Niagara效果制作和 Sequencer 相机移动，练习面向短片流程的 UE 场景制作。">负责关卡搭建、蓝图设置、Niagara效果制作和 Sequencer 相机移动，练习面向短片流程的 UE 场景制作。</p>
                     </div>
                 </article>
 
-                <article class="project-card" data-category="data design" data-priority-design="1" data-priority-tech="5">
-                    <div class="project-poster text-poster">
-                        <span class="poster-chip" data-en="Data vis" data-zh="数据可视化">Data vis</span>
-                        <strong data-en="INFOSCI301 poster" data-zh="INFOSCI301 海报">INFOSCI301 poster</strong>
-                        <p data-en="A poster-format data visualization project documented as a final PDF." data-zh="以最终 PDF 呈现的数据可视化海报项目。">A poster-format data visualization project documented as a final PDF.</p>
+                <article class="project-card" data-category="level game">
+                    <div class="poster poster-light">
+                        <strong>Splatoon 3<br>Yanyun</strong>
                     </div>
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span data-en="Data visualization" data-zh="数据可视化">Data visualization</span>
-                            <span data-en="Poster format" data-zh="海报形式">Poster format</span>
-                        </div>
-                        <h3 data-en="INFOSCI301 poster and data story" data-zh="INFOSCI301 海报与数据叙事">INFOSCI301 poster and data story</h3>
-                        <p data-en="A final poster project combining data collection, visualization, and narrative framing. The PDF is included directly as project evidence." data-zh="一个结合数据收集、可视化与叙事结构的课程最终海报项目，PDF 直接作为项目证据呈现。">A final poster project combining data collection, visualization, and narrative framing. The PDF is included directly as project evidence.</p>
-                        <ul class="tag-list">
-                            <li>Tableau</li>
-                            <li>Python</li>
-                            <li>Illustrator</li>
-                            <li>Poster design</li>
-                        </ul>
-                        <div class="card-actions">
-                            <a href="image/INFOSCI301_Poster_Group4_Chen_Yu.pdf" target="_blank" rel="noreferrer" data-en="Open PDF" data-zh="打开 PDF">Open PDF</a>
-                        </div>
+                    <div>
+                        <span class="project-type" data-en="Level Analysis" data-zh="关卡拆解">关卡拆解</span>
+                        <h3 data-en="Level breakdown: Splatoon 3 and Where Winds Meet" data-zh="关卡拆解：Splatoon 3 与 燕云十六声">关卡拆解：Splatoon 3 与 燕云十六声</h3>
+                        <p data-en="Recreated Splatoon 3's MakoMart as a UE whitebox by scale, then analyzed hotspots and player routes. Also analyzed Where Winds Meet's fishing level through imagery, core mechanics, interaction, and experience flow." data-zh="按比例用 UE 白盒复刻 Splatoon 3 的 MakoMart 地图，分析地图热点和玩家动线；同时对《燕云十六声》碧波垂钓关卡做意象模型、核心玩法、交互和体验流程分析。">按比例用 UE 白盒复刻 Splatoon 3 的 MakoMart 地图，分析地图热点和玩家动线；同时对《燕云十六声》碧波垂钓关卡做意象模型、核心玩法、交互和体验流程分析。</p>
                     </div>
                 </article>
 
-                <article class="project-card" data-category="design" data-priority-design="6" data-priority-tech="6">
-                    <img src="image/sticker.png" alt="Sticker design preview">
-                    <div class="project-body">
-                        <div class="project-meta">
-                            <span data-en="Visual design" data-zh="视觉设计">Visual design</span>
-                            <span data-en="Student worker" data-zh="学生助理">Student worker</span>
-                        </div>
-                        <h3 data-en="Japanese course sticker system" data-zh="日语课程贴纸系统">Japanese course sticker system</h3>
-                        <p data-en="Sticker and promotional material design for DKU Japanese courses, balancing educational motivation with cultural references and print decisions." data-zh="为 DKU 日语课程设计贴纸与宣传物料，在学习激励、日本文化元素与印刷选择之间做平衡。">Sticker and promotional material design for DKU Japanese courses, balancing educational motivation with cultural references and print decisions.</p>
-                        <ul class="tag-list">
-                            <li>Illustrator</li>
-                            <li>Print</li>
-                            <li>Visual identity</li>
-                            <li>Education</li>
-                        </ul>
+                <article class="project-card" data-category="game level">
+                    <img src="image/projects/game-prototype/PygameBattleImg.png" alt="Mind Maze game preview">
+                    <div>
+                        <span class="project-type" data-en="2D Pixel / Combat Level" data-zh="2D像素 / 战斗关卡">2D像素 / 战斗关卡</span>
+                        <h3 data-en="Mind Maze" data-zh="心灵迷宫 Mind Maze">心灵迷宫 Mind Maze</h3>
+                        <p data-en="A 2D pixel puzzle platformer about psychological metaphors. I designed and executed two boss-combat levels, including boss forms, attack patterns, and asset collection/production." data-zh="Team NaN 开发的 2D 像素艺术解谜平台游戏，通过隐喻性 Boss 战探索心理主题。我负责两个战斗关卡设计与执行，包括 Boss 形态、攻击方式、素材收集和制作。">Team NaN 开发的 2D 像素艺术解谜平台游戏，通过隐喻性 Boss 战探索心理主题。我负责两个战斗关卡设计与执行，包括 Boss 形态、攻击方式、素材收集和制作。</p>
+                        <a href="https://github.com/GRUUIS/Mind_Maze_NaN" target="_blank" rel="noreferrer">GitHub</a>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section class="skills section-shell">
-            <div class="section-heading">
-                <p class="eyebrow" data-en="Skills" data-zh="技能">Skills</p>
-                <h2 data-en="Switching between design intent and technical execution." data-zh="在设计意图与技术实现之间切换，是我最稳定的工作方式。">Switching between design intent and technical execution.</h2>
+        <section class="gameplay section-shell" id="gameplay">
+            <div class="split-heading">
+                <p class="eyebrow" data-en="Gameplay Experience" data-zh="游戏经历">游戏经历</p>
+                <h2 data-en="Long-term play informs my design vocabulary." data-zh="长期游玩经验为我的策划表达提供设计语汇。">长期游玩经验为我的策划表达提供设计语汇。</h2>
             </div>
+            <div class="game-grid">
+                <article>
+                    <h3>Fate/Grand Order</h3>
+                    <p data-en="8+ years and 500+ hours. Familiar with long-term narrative operation, character IP commercialization, limited banners, event missions, shop exchange, servant growth, craft essence matching, and farming loops." data-zh="8年以上长期游玩，500小时以上。熟悉剧情驱动长线运营、角色IP商业化、限定卡池与复刻节奏、活动任务与兑换商店、从者养成、礼装搭配和周回体系。">8年以上长期游玩，500小时以上。熟悉剧情驱动长线运营、角色IP商业化、限定卡池与复刻节奏、活动任务与兑换商店、从者养成、礼装搭配和周回体系。</p>
+                </article>
+                <article>
+                    <h3>Splatoon 3</h3>
+                    <p data-en="300+ hours across PvP, ranked, Salmon Run, Splatfest, gear, and reward systems. I focus on ink-control loops, routes, high ground, cover, choke points, respawn routes, weapon differences, and team feedback." data-zh="300小时以上，长期体验PVP涂地、真格排位、PVE鲑鱼跑、祭典、装备与奖励系统。重点关注墨水控制循环、动线、高低差、掩体、瓶颈、复活路线、武器差异与团队反馈。">300小时以上，长期体验PVP涂地、真格排位、PVE鲑鱼跑、祭典、装备与奖励系统。重点关注墨水控制循环、动线、高低差、掩体、瓶颈、复活路线、武器差异与团队反馈。</p>
+                </article>
+                <article>
+                    <h3 data-en="Stardew Valley" data-zh="星露谷物语">星露谷物语</h3>
+                    <p data-en="I study its low-pressure long-term loop: farming, collecting, fishing, combat, mining, NPC relationships, festivals, the community center, stamina, time, seasons, and player-chosen goals." data-zh="关注其低压力长线循环：种植、采集、钓鱼、战斗、下矿、NPC好感、节日、社区中心、体力、时间、季节与由玩家自主选择的目标推进。">关注其低压力长线循环：种植、采集、钓鱼、战斗、下矿、NPC好感、节日、社区中心、体力、时间、季节与由玩家自主选择的目标推进。</p>
+                </article>
+                <article>
+                    <h3 data-en="Where Winds Meet" data-zh="燕云十六声">燕云十六声</h3>
+                    <p data-en="500+ hours. I pay attention to how open-world exploration, puzzle combat, and fragmented storytelling deepen worldbuilding through player movement." data-zh="500小时以上，关注大地图探索、关卡解谜战斗与碎片化叙事如何在探索过程中逐步加深世界观理解。">500小时以上，关注大地图探索、关卡解谜战斗与碎片化叙事如何在探索过程中逐步加深世界观理解。</p>
+                </article>
+            </div>
+            <p class="game-note" data-en="Other played genres include RPG, ACG, PC single-player exploration and roguelike games, interactive narrative, rhythm games, mahjong/card games, otome games, and MMO." data-zh="其他长期关注品类包括 RPG、二次元、PC单机探索/解谜/肉鸽、互动叙事、音游、棋牌、乙女与 MMO。">其他长期关注品类包括 RPG、二次元、PC单机探索/解谜/肉鸽、互动叙事、音游、棋牌、乙女与 MMO。</p>
+        </section>
 
+        <section class="skills section-shell" id="skills">
+            <div class="split-heading">
+                <p class="eyebrow" data-en="Skills" data-zh="技能">技能</p>
+                <h2 data-en="Tools are grouped by how I actually use them in production." data-zh="技能按实际生产中的使用方式组织。">技能按实际生产中的使用方式组织。</h2>
+            </div>
             <div class="skills-grid">
-                <article class="panel skill-panel" data-skill-group="design">
-                    <h3 data-en="Design & creative tools" data-zh="设计与创意工具">Design & creative tools</h3>
-                    <p>Adobe Illustrator, Procreate, Procreate Dreams, Aseprite, Blender, DaVinci Resolve</p>
+                <article>
+                    <h3 data-en="Engines & Prototyping" data-zh="引擎与原型">引擎与原型</h3>
+                    <p>Unity, Unreal Engine 5 Blueprint, Meta SDK, OpenXR, Codex-assisted interaction demos</p>
                 </article>
-                <article class="panel skill-panel" data-skill-group="tech">
-                    <h3 data-en="Programming & technical stack" data-zh="编程与技术栈">Programming & technical stack</h3>
-                    <p>HTML, CSS, JavaScript, Python, C, R, Stata, Arduino, Unity XR, OpenXR, MetaSDK, UE Blueprint</p>
+                <article>
+                    <h3 data-en="Design & Planning" data-zh="策划与设计">策划与设计</h3>
+                    <p data-en="Gameplay mechanics, level breakdown, system thinking, interaction flowcharts, documentation" data-zh="玩法机制、关卡拆解、系统思考、交互流程图、过程文档">玩法机制、关卡拆解、系统思考、交互流程图、过程文档</p>
                 </article>
-                <article class="panel skill-panel" data-skill-group="hybrid">
-                    <h3 data-en="Hybrid strengths" data-zh="复合能力">Hybrid strengths</h3>
-                    <p data-en="ComfyUI workflows, game-based learning, visual communication, process documentation, and bilingual presentation." data-zh="ComfyUI 工作流、游戏化学习、视觉表达、过程文档整理，以及双语展示能力。">ComfyUI workflows, game-based learning, visual communication, process documentation, and bilingual presentation.</p>
+                <article>
+                    <h3 data-en="Code & Data" data-zh="代码与数据">代码与数据</h3>
+                    <p>Python, C#, Tableau, Excel, Stata, data cleaning and visualization</p>
                 </article>
-            </div>
-        </section>
-
-        <section class="timeline section-shell" id="timeline">
-            <div class="section-heading">
-                <p class="eyebrow" data-en="Timeline" data-zh="经历时间线">Timeline</p>
-                <h2 data-en="Education, projects, and signals of growth." data-zh="把教育、项目和能力增长信号放在同一条时间线上。">Education, projects, and signals of growth.</h2>
-            </div>
-
-            <div class="timeline-list">
-                <article class="timeline-item">
-                    <span class="timeline-date">2025.09 - 2027.03</span>
-                    <div>
-                        <h3 data-en="Hong Kong Polytechnic University" data-zh="香港理工大学">Hong Kong Polytechnic University</h3>
-                        <p data-en="MSc in Innovative Multimedia Entertainment." data-zh="创新多媒体娱乐理学硕士。">MSc in Innovative Multimedia Entertainment.</p>
-                    </div>
+                <article>
+                    <h3 data-en="AI Workflow" data-zh="AI工作流">AI工作流</h3>
+                    <p>ComfyUI, Codex, GPT, AIGC workflow testing and documentation</p>
                 </article>
-                <article class="timeline-item">
-                    <span class="timeline-date">2025.10 - 2026.05</span>
-                    <div>
-                        <h3 data-en="VR development volunteer" data-zh="VR 开发志愿者">VR development volunteer</h3>
-                        <p data-en="Worked with VR interaction, ceramic-themed scenes, OpenXR setup, and MetaSDK-related implementation." data-zh="参与 VR 交互、陶瓷主题场景、OpenXR 流程与 MetaSDK 相关实现。">Worked with VR interaction, ceramic-themed scenes, OpenXR setup, and MetaSDK-related implementation.</p>
-                    </div>
+                <article>
+                    <h3 data-en="Visual & Video" data-zh="视觉与视频">视觉与视频</h3>
+                    <p>Adobe Illustrator, Photoshop, Canva, Procreate, DaVinci Resolve, Jianying</p>
                 </article>
-                <article class="timeline-item">
-                    <span class="timeline-date">2024.08 - 2025.02</span>
-                    <div>
-                        <h3 data-en="Pixel Nihongo capstone" data-zh="Pixel Nihongo 毕业设计">Pixel Nihongo capstone</h3>
-                        <p data-en="Designed a playful learning loop that turns language progress into game interaction." data-zh="设计了一个将语言进步转化为游戏交互反馈的学习循环。">Designed a playful learning loop that turns language progress into game interaction.</p>
-                    </div>
-                </article>
-                <article class="timeline-item">
-                    <span class="timeline-date">2024.02 - 2025.02</span>
-                    <div>
-                        <h3 data-en="Creative video and visual design work" data-zh="创意视频与视觉设计工作">Creative video and visual design work</h3>
-                        <p data-en="Led student video production tasks and designed sticker materials for course communication." data-zh="负责学生视频制作协作，并为课程传播设计贴纸物料。">Led student video production tasks and designed sticker materials for course communication.</p>
-                    </div>
-                </article>
-                <article class="timeline-item">
-                    <span class="timeline-date">2023 - 2026</span>
-                    <div>
-                        <h3 data-en="Signals of growth" data-zh="成长信号">Signals of growth</h3>
-                        <p data-en="Dean's List, scholarship support, TOEFL 96, CET-4 618, Tencent game-art related learning." data-zh="院长名录、奖学金支持、TOEFL 96、四级 618，以及腾讯游戏美术相关学习经历。">Dean's List, scholarship support, TOEFL 96, CET-4 618, Tencent game-art related learning.</p>
-                    </div>
+                <article>
+                    <h3 data-en="Language" data-zh="语言">语言</h3>
+                    <p>Mandarin, English, TOEFL 96</p>
                 </article>
             </div>
         </section>
 
-        <section class="archive section-shell" id="archive">
-            <div class="section-heading">
-                <p class="eyebrow" data-en="Visual archive" data-zh="视觉档案">Visual archive</p>
-                <h2 data-en="Earlier materials that still show texture, atmosphere, and range." data-zh="一些更早期的素材，仍然能说明我的风格、氛围感和跨度。">Earlier materials that still show texture, atmosphere, and range.</h2>
+        <section class="links section-shell">
+            <div class="split-heading">
+                <p class="eyebrow" data-en="Portfolio Links" data-zh="作品入口">作品入口</p>
+                <h2 data-en="More process records, demos, and breakdown documents." data-zh="更多过程记录、Demo 与拆解文档。">更多过程记录、Demo 与拆解文档。</h2>
             </div>
-
-            <div class="archive-grid">
-                <article class="panel archive-feature">
-                    <img src="image/city.png" alt="City illustration background">
-                    <div>
-                        <h3 data-en="Mood and atmosphere" data-zh="氛围与基调">Mood and atmosphere</h3>
-                        <p data-en="I use older cityscape, texture, and environment images here to show the visual atmosphere that often informs my newer work." data-zh="我把早期的城市、纹理和环境类图像放在这里，作为后来项目气质和视觉偏好的来源。">I use older cityscape, texture, and environment images here to show the visual atmosphere that often informs my newer work.</p>
-                    </div>
-                </article>
-
-                <article class="panel archive-feature">
-                    <img src="image/front_01.png" alt="Mascot design render">
-                    <div>
-                        <h3 data-en="3D and object thinking" data-zh="3D 与物件思维">3D and object thinking</h3>
-                        <p data-en="The mascot render and Arduino project photos remain useful as evidence of earlier making, prototyping, and playful object-based thinking." data-zh="吉祥物渲染和 Arduino 项目照片仍然能作为我早期制作、原型实践和物件思维的证据。">The mascot render and Arduino project photos remain useful as evidence of earlier making, prototyping, and playful object-based thinking.</p>
-                    </div>
-                </article>
-            </div>
-
-            <div class="mosaic-grid">
-                <img src="image/circuit_photo.jpg" alt="Arduino project photo">
-                <img src="image/photo1.jpg" alt="Archive photo one">
-                <img src="image/photo2.jpg" alt="Archive photo two">
-                <img src="image/photo3.jpg" alt="Archive photo three">
-                <img src="image/photo5.jpg" alt="Archive photo five">
-                <img src="image/photo6.jpg" alt="Archive photo six">
-                <img src="image/photo7.jpg" alt="Archive photo seven">
-                <img src="image/photo8.jpg" alt="Archive photo eight">
-                <img src="image/pixelart_texture.gif" alt="Pixel texture animation">
-                <img src="image/yashiro_sofa.jpg" alt="Pixel object in Blender scene">
+            <div class="link-list">
+                <a href="https://github.com/GRUUIS" target="_blank" rel="noreferrer">GitHub / Vibe Coding + VR开发记录</a>
+                <a href="https://1drv.ms/f/c/c36e9619e10e3126/IgApsgmN_EwTTY_KfKOkx32nAQLKZS18Te5sC1dZT7fooZc?e=cIIOwq" target="_blank" rel="noreferrer">总作品集：demo视频、过程记录文档、游戏拆解</a>
+                <a href="https://1drv.ms/b/c/c36e9619e10e3126/IQBj15naEK17SoY6KB4IZQYBAYkGF6zIkhHHTtLRE8dYxX0?e=rHVVkm" target="_blank" rel="noreferrer">游戏拆解：TPS / Splatoon 3</a>
+                <a href="https://1drv.ms/b/c/c36e9619e10e3126/IQBuB7KTV2ZzTIbTib-pvaz8AXD03EGJd4SquDXgGWlQ8qo?e=cmyqS0" target="_blank" rel="noreferrer">游戏拆解：MMORPG / 燕云十六声</a>
+                <a href="https://1drv.ms/f/c/c36e9619e10e3126/IgApsgmN_EwTTY_KfKOkx32nAQLKZS18Te5sC1dZT7fooZc?e=Td7c8y" target="_blank" rel="noreferrer">数据可视化：原神官方评论区</a>
+                <a href="https://gruuis.github.io/personal_website_FY/" target="_blank" rel="noreferrer">个人主页线上版本</a>
             </div>
         </section>
 
         <section class="contact section-shell" id="contact">
-            <div class="section-heading">
-                <p class="eyebrow" data-en="Contact" data-zh="联系">Contact</p>
-                <h2 data-en="Open to multimedia design, creative technology, and interactive media opportunities." data-zh="正在寻找多媒体设计、创意技术与互动媒体相关机会。">Open to multimedia design, creative technology, and interactive media opportunities.</h2>
+            <div>
+                <p class="eyebrow" data-en="Contact" data-zh="联系">联系</p>
+                <h2 data-en="Open to game design, level design, system design, XR, and interactive media internships." data-zh="正在寻找游戏策划、关卡策划、系统策划、XR 与互动媒体相关实习机会。">正在寻找游戏策划、关卡策划、系统策划、XR 与互动媒体相关实习机会。</h2>
             </div>
-
-            <div class="contact-grid">
-                <article class="panel">
-                    <h3 data-en="Direct contact" data-zh="直接联系">Direct contact</h3>
-                    <ul class="clean-list">
-                        <li><a href="mailto:yufanz1114@outlook.com">yufanz1114@outlook.com</a></li>
-                        <li><a href="tel:+8615190062311">+86 15190062311</a></li>
-                        <li data-en="Suzhou / Hong Kong" data-zh="苏州 / 中国香港">Suzhou / Hong Kong</li>
-                    </ul>
-                </article>
-                <article class="panel">
-                    <h3 data-en="Portfolio trail" data-zh="作品入口">Portfolio trail</h3>
-                    <div class="card-actions vertical-actions">
-                        <a href="html/about_page.html" data-en="Browse archived art page" data-zh="查看旧版艺术页面">Browse archived art page</a>
-                        <a href="html/project_page.html" data-en="Browse archived project page" data-zh="查看旧版项目页面">Browse archived project page</a>
-                        <a href="docs/project-notes/UE_Lighting_Journal_Part_2.pdf" target="_blank" rel="noreferrer" data-en="Read UE lighting journal" data-zh="阅读 UE 灯光文档">Read UE lighting journal</a>
-                    </div>
-                </article>
+            <div class="contact-links">
+                <a href="https://github.com/GRUUIS" target="_blank" rel="noreferrer">github.com/GRUUIS</a>
+                <a href="https://space.bilibili.com/48692225" target="_blank" rel="noreferrer">Bilibili</a>
+                <a href="html/project_page.html" data-en="Archive project page" data-zh="旧版项目页">旧版项目页</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p data-en="Thank you for visiting." data-zh="感谢您的访问。">Thank you for visiting.</p>
+        <p>FAN YU. Game, XR, and interactive media portfolio.</p>
     </footer>
 
     <script src="js/homepage.js"></script>
