@@ -394,6 +394,43 @@ p {
     background-size: 32px 32px;
 }
 
+.poster-debate {
+    position: relative;
+    place-items: start;
+    align-content: space-between;
+    overflow: hidden;
+    min-height: 0;
+    color: #f7f6f0;
+    background:
+        radial-gradient(circle at 82% 18%, rgba(97, 214, 207, 0.72), transparent 22%),
+        radial-gradient(circle at 18% 84%, rgba(232, 171, 192, 0.58), transparent 25%),
+        #111;
+    text-align: left;
+}
+
+.poster-debate::after {
+    content: "01  /  10";
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    color: rgba(255, 255, 255, 0.52);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+}
+
+.poster-debate span {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+}
+
+.poster-debate strong {
+    max-width: 85%;
+    font-size: clamp(2rem, 3.1vw, 3.25rem);
+    line-height: 0.86;
+}
+
 .game-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -403,6 +440,455 @@ p {
     margin: 28px 0 0 auto;
     color: var(--muted);
     font-size: 1.05rem;
+}
+
+/* Gameplay archive */
+.gameplay-heading .section-intro {
+    max-width: 720px;
+    margin: 28px 0 0;
+    font-size: 1.08rem;
+}
+
+.core-games {
+    display: grid;
+    gap: 24px;
+}
+
+.core-game {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    min-height: 560px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--paper);
+}
+
+.core-game-splatoon {
+    grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+}
+
+.core-game-media {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    background: #121212;
+}
+
+.core-game-media::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 34%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.58));
+    pointer-events: none;
+}
+
+.core-game-media img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.core-index {
+    position: absolute;
+    z-index: 1;
+    left: 24px;
+    bottom: 22px;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+}
+
+.core-game-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(30px, 5vw, 62px);
+}
+
+.game-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.game-kicker,
+.detail-category {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.game-title-row h3,
+.explorer-heading h3,
+.play-culture h3,
+.game-detail h3 {
+    font-size: clamp(1.8rem, 4vw, 3.35rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.game-title-row strong {
+    color: var(--ink);
+    font-size: clamp(2rem, 4vw, 3.8rem);
+    line-height: 0.82;
+    letter-spacing: -0.06em;
+    white-space: nowrap;
+}
+
+.game-title-row small {
+    display: block;
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.game-tags,
+.detail-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.game-tags span,
+.detail-tags span {
+    padding: 8px 11px;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    color: #626262;
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.core-game-copy > p {
+    margin: 26px 0 0;
+}
+
+.design-notes {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+}
+
+.design-notes summary {
+    width: max-content;
+    color: var(--ink);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+}
+
+.design-notes p {
+    margin: 18px 0 0;
+}
+
+.core-game-yanyun {
+    grid-template-columns: 0.56fr 1fr;
+    min-height: 500px;
+    color: #f4f0e6;
+    border-color: #242424;
+    background: #151515;
+}
+
+.core-game-yanyun::after {
+    content: "QUEST / SPACE / DISCOVERY";
+    position: absolute;
+    right: -40px;
+    top: 46%;
+    color: rgba(255, 255, 255, 0.08);
+    font-size: clamp(2.2rem, 6vw, 5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    transform: rotate(90deg);
+}
+
+.yanyun-mark {
+    position: relative;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    background:
+        radial-gradient(circle at 25% 25%, rgba(240, 215, 159, 0.16), transparent 25%),
+        linear-gradient(145deg, #28241f, #111);
+}
+
+.yanyun-mark::before,
+.yanyun-mark::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 140%;
+    top: -20%;
+    background: rgba(239, 224, 188, 0.16);
+    transform: rotate(32deg);
+}
+
+.yanyun-mark::before { left: 36%; }
+.yanyun-mark::after { right: 28%; }
+
+.yanyun-mark span {
+    position: relative;
+    z-index: 1;
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: clamp(5rem, 11vw, 9rem);
+    font-weight: 900;
+    line-height: 0.78;
+}
+
+.core-game-yanyun p,
+.core-game-yanyun .game-kicker,
+.core-game-yanyun .game-title-row small {
+    color: #bdb9af;
+}
+
+.core-game-yanyun .game-title-row strong,
+.core-game-yanyun .game-tags span,
+.core-game-yanyun .design-notes summary {
+    color: #f4f0e6;
+}
+
+.core-game-yanyun .design-notes {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.game-explorer {
+    margin-top: 72px;
+    padding: clamp(26px, 5vw, 56px);
+    border-radius: 18px;
+    color: #f5f5f5;
+    background: #111;
+}
+
+.explorer-heading {
+    display: grid;
+    grid-template-columns: 1fr 0.72fr;
+    gap: 40px;
+    align-items: end;
+}
+
+.explorer-heading p {
+    margin: 0;
+    color: #aaa;
+}
+
+.game-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 34px 0 24px;
+}
+
+.game-filter button {
+    padding: 9px 14px;
+    border: 1px solid #3a3a3a;
+    border-radius: 999px;
+    color: #a8a8a8;
+    background: transparent;
+    font: inherit;
+    font-size: 0.74rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.game-filter button:hover,
+.game-filter button:focus-visible,
+.game-filter button.is-active {
+    color: #111;
+    border-color: #f4f4f4;
+    background: #f4f4f4;
+}
+
+.explorer-layout {
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 0.68fr);
+    gap: 1px;
+    overflow: hidden;
+    min-height: 480px;
+    border: 1px solid #303030;
+    border-radius: 12px;
+    background: #303030;
+}
+
+.word-cloud {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 17px;
+    flex-wrap: wrap;
+    padding: clamp(24px, 5vw, 54px);
+    background:
+        radial-gradient(circle at 30% 28%, rgba(30, 199, 194, 0.09), transparent 32%),
+        radial-gradient(circle at 72% 68%, rgba(237, 102, 117, 0.08), transparent 30%),
+        #171717;
+}
+
+.cloud-word {
+    padding: 3px 5px;
+    border: 0;
+    color: #878787;
+    background: transparent;
+    font: inherit;
+    font-size: calc(0.72rem + (var(--weight) * 0.14rem));
+    font-weight: calc(450 + (var(--weight) * 55));
+    line-height: 1.05;
+    cursor: pointer;
+    transition: color 180ms ease, transform 180ms ease, opacity 180ms ease;
+}
+
+.cloud-word:hover,
+.cloud-word:focus-visible,
+.cloud-word.is-active {
+    color: var(--cloud-color, #fff);
+    outline: none;
+    transform: translateY(-3px);
+}
+
+.cloud-word.is-muted {
+    display: none;
+}
+
+.game-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(28px, 4vw, 48px);
+    background: #f6f3ed;
+}
+
+.game-detail h3,
+.game-detail .detail-metric {
+    color: #171717;
+}
+
+.game-detail > p:not(.detail-metric) {
+    margin: 18px 0 24px;
+    color: #535353;
+}
+
+.detail-metric {
+    margin: 18px 0 0;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #d7d2ca;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.detail-hint {
+    margin-top: 30px;
+    color: #969188;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.play-culture {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 72px;
+}
+
+.play-culture-copy {
+    grid-column: 1 / span 5;
+    align-self: center;
+    padding: 24px 36px 24px 0;
+}
+
+.play-culture-copy p {
+    margin: 24px 0 0;
+}
+
+.culture-image {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 12px;
+    background: #ddd;
+}
+
+.culture-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms ease;
+}
+
+.culture-image:hover img {
+    transform: scale(1.025);
+}
+
+.culture-image figcaption {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    width: max-content;
+    max-width: calc(100% - 28px);
+    padding: 8px 11px;
+    border-radius: 6px;
+    color: #fff;
+    background: rgba(12, 12, 12, 0.75);
+    backdrop-filter: blur(10px);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.culture-gris {
+    grid-column: 6 / span 7;
+    min-height: 320px;
+}
+
+.culture-fgo {
+    grid-column: 1 / span 4;
+    min-height: 300px;
+}
+
+.culture-event {
+    grid-column: 5 / span 8;
+    min-height: 300px;
+}
+
+.farewell {
+    padding-top: 36px;
+}
+
+.farewell-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 34px;
+}
+
+.farewell-heading .eyebrow {
+    margin-bottom: 0;
+}
+
+.farewell-heading .eyebrow::after {
+    margin-left: 0;
+}
+
+.farewell video {
+    display: block;
+    width: 100%;
+    max-height: min(78vh, 760px);
+    border-radius: 18px;
+    background: #0d0d0d;
+    object-fit: contain;
 }
 
 .link-list,
@@ -471,6 +957,36 @@ p {
     .hero {
         min-height: auto;
     }
+
+    .core-game-splatoon,
+    .core-game-yanyun,
+    .explorer-heading,
+    .explorer-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .core-game-media {
+        min-height: 430px;
+    }
+
+    .yanyun-mark {
+        min-height: 300px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .yanyun-mark span {
+        display: inline-block;
+        line-height: 1;
+    }
+
+    .explorer-layout {
+        min-height: 0;
+    }
+
+    .word-cloud {
+        min-height: 380px;
+    }
 }
 
 @media (max-width: 680px) {
@@ -519,5 +1035,85 @@ p {
     .game-grid article {
         min-height: auto;
         padding: 24px;
+    }
+
+    .core-game {
+        min-height: 0;
+        border-radius: 12px;
+    }
+
+    .core-game-media {
+        min-height: 290px;
+    }
+
+    .core-game-copy {
+        padding: 26px 22px;
+    }
+
+    .game-title-row {
+        align-items: flex-start;
+    }
+
+    .game-title-row strong {
+        font-size: 2.1rem;
+    }
+
+    .yanyun-mark {
+        min-height: 230px;
+    }
+
+    .game-explorer {
+        margin-top: 48px;
+        padding: 22px 14px;
+        border-radius: 12px;
+    }
+
+    .word-cloud {
+        min-height: 340px;
+        gap: 10px 12px;
+        padding: 26px 18px;
+    }
+
+    .play-culture {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 48px;
+    }
+
+    .play-culture-copy,
+    .culture-gris,
+    .culture-fgo,
+    .culture-event {
+        grid-column: 1;
+    }
+
+    .play-culture-copy {
+        padding: 0 0 18px;
+    }
+
+    .culture-gris,
+    .culture-fgo,
+    .culture-event {
+        min-height: 250px;
+    }
+
+    .farewell-heading {
+        display: grid;
+        align-items: start;
+    }
+
+    .farewell video {
+        border-radius: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .cloud-word,
+    .culture-image img {
+        transition: none;
     }
 }
