@@ -882,12 +882,20 @@ p {
     margin-left: 0;
 }
 
+.farewell-video-frame {
+    width: min(100%, 960px);
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #0d0d0d;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.12);
+}
+
 .farewell video {
     display: block;
     width: 100%;
-    max-height: min(78vh, 760px);
-    border-radius: 18px;
-    background: #0d0d0d;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -1102,7 +1110,7 @@ p {
         align-items: start;
     }
 
-    .farewell video {
+    .farewell-video-frame {
         border-radius: 12px;
     }
 }
