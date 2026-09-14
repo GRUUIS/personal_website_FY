@@ -1,0 +1,778 @@
+@media(min-width:1500px) {
+  main {
+    padding-top:40px
+  }
+  .weapon-card canvas {
+    height:148px
+  }
+}
+@media(max-width:1080px) {
+  .topbar {
+    padding:14px 24px;
+    gap:15px
+  }
+  main {
+    padding:27px 24px
+  }
+  .armory-layout {
+    grid-template-columns:minmax(0,1fr) 270px;
+    gap:18px
+  }
+  .weapon-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr))
+  }
+  .loadout-panel {
+    padding:18px
+  }
+  .workshop-layout {
+    grid-template-columns:minmax(0,1.15fr) minmax(290px,.85fr);
+    gap:17px
+  }
+  .editor-panel,.preview-panel {
+    padding:17px
+  }
+  .drawing-surface {
+    grid-template-columns:44px minmax(0,1fr);
+    gap:9px
+  }
+  .tool {
+    min-height:42px
+  }
+  .palette {
+    gap:11px
+  }
+  .swatch {
+    width:29px;
+    height:29px
+  }
+  .preview-heading {
+    flex-wrap:wrap;
+    gap:5px
+  }
+  .keyboard-hint {
+    font-size:11px
+  }
+  .battle-weapon span {
+    display:none
+  }
+}
+@media(max-width:800px) {
+  .page-heading {
+    align-items:flex-start
+  }
+  .page-heading p {
+    font-size:12px
+  }
+  .workshop-layout {
+    grid-template-columns:1fr
+  }
+  .editor-panel,.preview-panel {
+    padding:20px
+  }
+  .drawing-surface {
+    grid-template-columns:52px minmax(0,1fr)
+  }
+  .tool {
+    min-height:48px
+  }
+  .swatch {
+    width:36px;
+    height:36px
+  }
+  .preview-panel {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:20px
+  }
+  .preview-heading,.preview-scene,.trial-tabs {
+    grid-column:1
+  }
+  .weapon-options,#craftHint,.stats-row,.formula-panel,.anchor-panel,#saveEquipButton,.preview-panel>.control-note {
+    grid-column:2
+  }
+  .preview-heading {
+    grid-row:1
+  }
+  .preview-scene {
+    grid-row:2/6;
+    align-self:start
+  }
+  .trial-tabs {
+    grid-row:6
+  }
+  .weapon-options {
+    grid-row:1/3
+  }
+  #craftHint {
+    grid-row:3
+  }
+  .stats-row {
+    grid-row:4
+  }
+  .formula-panel {
+    grid-row:5/9
+  }
+  .anchor-panel {
+    grid-column:1;
+    grid-row:7/9
+  }
+  #saveEquipButton {
+    grid-column:1/-1
+  }
+  .preview-panel>.control-note {
+    grid-column:1/-1
+  }
+  .name-label input {
+    font-size:20px
+  }
+  .battle-bottom {
+    gap:10px
+  }
+  .keyboard-hint {
+    display:none
+  }
+  .joystick {
+    display:block;
+    margin-right:auto
+  }
+  .battle-weapon canvas {
+    width:33px;
+    height:33px
+  }
+  .battle-hud {
+    padding:12px 16px
+  }
+  .level-badge {
+    font-size:11px;
+    padding:4px 7px
+  }
+}
+@media(max-width:600px) {
+  :root {
+    font-size:14px
+  }
+  .topbar {
+    padding:13px 16px;
+    gap:10px;
+    flex-wrap:wrap;
+    min-height:72px
+  }
+  .brand {
+    font-size:15px;
+    gap:8px
+  }
+  .brand img {
+    width:28px;
+    height:28px
+  }
+  .brand small {
+    font-size:11px
+  }
+  .top-actions {
+    gap:7px;
+    margin-left:auto
+  }
+  .main-nav {
+    order:3;
+    width:100%;
+    justify-content:center;
+    gap:0
+  }
+  .nav-link {
+    flex:1;
+    padding:8px 12px
+  }
+  .icon-button {
+    width:32px;
+    height:32px;
+    min-height:32px!important
+  }
+  .top-actions .level-badge {
+    font-size:12px
+  }
+  main {
+    padding:23px 15px 15px
+  }
+  .page-heading {
+    flex-direction:column;
+    gap:16px;
+    margin-bottom:21px
+  }
+  .page-heading h1 {
+    font-size:23px
+  }
+  .page-heading>.primary-button {
+    width:100%
+  }
+  .eyebrow {
+    font-size:11px
+  }
+  .armory-layout {
+    display:flex;
+    flex-direction:column;
+    gap:20px
+  }
+  .map-banner {
+    width:100%;
+    padding:14px;
+    gap:13px;
+    min-height:144px
+  }
+  .map-banner canvas {
+    width:106px;
+    max-width:32%
+  }
+  .map-copy h2 {
+    font-size:20px
+  }
+  .map-copy .eyebrow {
+    font-size:11px
+  }
+  .map-copy p {
+    font-size:11px;
+    padding:0;
+    line-height:1.7
+  }
+  .map-number {
+    display:none
+  }
+  .map-rules {
+    gap:5px
+  }
+  .map-rules span {
+    font-size:11px;
+    padding:2px 5px
+  }
+  .collection-panel {
+    width:100%;
+    order:2
+  }
+  .loadout-panel {
+    width:100%;
+    order:1;
+    padding:17px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px
+  }
+  .loadout-panel>.eyebrow,.loadout-panel>h2 {
+    grid-column:1/-1;
+    margin:0
+  }
+  .loadout-slots {
+    grid-column:1/-1;
+    grid-template-columns:1fr 1fr;
+    margin:0
+  }
+  .loadout-slot {
+    padding:7px;
+    gap:7px;
+    min-height:62px
+  }
+  .loadout-slot canvas {
+    width:34px;
+    height:34px
+  }
+  .loadout-slot strong {
+    font-size:11px
+  }
+  .loadout-slot.locked {
+    font-size:12px
+  }
+  .selection-details {
+    grid-column:1/-1;
+    margin:0;
+    padding:12px 0;
+    display:grid;
+    grid-template-columns:68px minmax(0,1fr);
+    column-gap:13px;
+    align-items:center;
+    text-align:left
+  }
+  .selection-details>canvas {
+    grid-column:1;
+    grid-row:1/5;
+    width:66px;
+    height:66px;
+    margin:0
+  }
+  .selection-details>h3 {
+    grid-column:2;
+    font-size:15px
+  }
+  .selection-details>p,.selection-details>.mini-recipe {
+    grid-column:2;
+    margin:1px 0;
+    justify-content:flex-start
+  }
+  .selection-details .equipment-actions {
+    grid-column:1/-1;
+    margin:11px 0 7px
+  }
+  .selection-details>.secondary-button,.minor-actions {
+    grid-column:1/-1
+  }
+  .minor-actions {
+    margin:5px 0 0
+  }
+  .loadout-panel>#startButton,.loadout-panel>.control-note {
+    grid-column:1/-1;
+    margin:0
+  }
+  .weapon-grid {
+    gap:11px
+  }
+  .weapon-card {
+    padding:11px
+  }
+  .weapon-card canvas {
+    height:112px
+  }
+  .weapon-card strong {
+    font-size:13px
+  }
+  .filter-row {
+    gap:6px
+  }
+  .filter-row button {
+    font-size:11px;
+    padding:7px 10px
+  }
+  .route {
+    gap:4px
+  }
+  .route-node {
+    font-size:12px;
+    border-radius:3px
+  }
+  .progress-panel {
+    padding:15px
+  }
+  .section-title>.subtle {
+    font-size:12px
+  }
+  .workshop-top-actions {
+    width:100%;
+    justify-content:space-between;
+    gap:10px
+  }
+  .workshop-top-actions .secondary-button {
+    min-height:36px;
+    font-size:12px;
+    padding:7px 11px
+  }
+  .workshop-layout {
+    gap:18px
+  }
+  .editor-panel,.preview-panel {
+    padding:14px
+  }
+  .panel-heading {
+    gap:10px
+  }
+  .name-label input {
+    width:210px;
+    font-size:18px
+  }
+  .canvas-growth>span {
+    font-size:14px
+  }
+  .canvas-growth .text-button {
+    font-size:12px
+  }
+  .art-tabs {
+    gap:7px;
+    margin:15px 0 12px
+  }
+  .segmented button {
+    font-size:12px;
+    padding:5px 7px
+  }
+  .drawing-surface {
+    display:flex;
+    flex-direction:column
+  }
+  .canvas-wrap {
+    order:0;
+    max-width:none
+  }
+  .toolrail {
+    order:1;
+    flex-direction:row;
+    gap:4px
+  }
+  .tool {
+    flex:1;
+    min-width:0;
+    min-height:42px
+  }
+  .tool span {
+    font-size:17px
+  }
+  .tool small {
+    font-size:11px
+  }
+  .edit-history {
+    gap:8px;
+    margin:9px 0 12px
+  }
+  .edit-history .text-button {
+    font-size:12px
+  }
+  .palette {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px
+  }
+  .palette-colors {
+    gap:8px
+  }
+  .swatch {
+    width:38px;
+    height:38px
+  }
+  .palette-group>span {
+    font-size:12px
+  }
+  .presets-row {
+    gap:7px
+  }
+  .presets-row>.subtle {
+    font-size:12px
+  }
+  .preset {
+    width:37px;
+    height:37px
+  }
+  .presets-row>.text-button {
+    font-size:12px
+  }
+  .preview-panel {
+    display:block
+  }
+  .preview-heading {
+    margin-bottom:11px
+  }
+  .weapon-options {
+    gap:10px
+  }
+  .stats-row {
+    margin:15px 0
+  }
+  .stats-row strong {
+    font-size:14px
+  }
+  .formula-panel .section-title h3 {
+    font-size:15px
+  }
+  .formula-panel .section-title .subtle {
+    font-size:11px
+  }
+  .recipe-labels {
+    font-size:12px
+  }
+  .formula-status {
+    font-size:12px
+  }
+  .weapon-options label,.formula-select {
+    font-size:12px
+  }
+  select {
+    font-size:16px;
+    min-height:44px
+  }
+  .anchor-panel {
+    font-size:12px
+  }
+  .preview-panel>.control-note {
+    font-size:12px
+  }
+  .playing .topbar {
+    min-height:62px
+  }
+  .playing .main-nav {
+    display:none
+  }
+  .playing main {
+    padding:11px 8px
+  }
+  .playing .brand {
+    font-size:13px
+  }
+  .battle-hud {
+    gap:9px;
+    padding:11px
+  }
+  .battle-title h2 {
+    font-size:14px
+  }
+  .battle-title .eyebrow {
+    font-size:11px
+  }
+  .battle-title .subtle {
+    font-size:11px
+  }
+  .vitality {
+    width:125px;
+    max-width:40%
+  }
+  .hud-overline {
+    font-size:11px
+  }
+  .health-row {
+    gap:5px
+  }
+  .health-row>span:last-child {
+    font-size:11px
+  }
+  .heart {
+    font-size:15px
+  }
+  .health-track {
+    height:8px
+  }
+  .battle-hud .glass-button {
+    padding:7px 10px;
+    min-height:34px
+  }
+  .game-stage {
+    min-height:0;
+    background:#152b2b
+  }
+  #gameCanvas {
+    height:auto;
+    aspect-ratio:8/5
+  }
+  .battle-bottom {
+    padding:12px 10px;
+    gap:8px;
+    flex-wrap:wrap
+  }
+  .joystick {
+    width:78px;
+    height:78px
+  }
+  .joystick i {
+    left:22px;
+    top:22px
+  }
+  .battle-loadout {
+    gap:5px;
+    max-width:90px
+  }
+  .battle-weapon {
+    padding:2px
+  }
+  .battle-weapon canvas {
+    width:32px;
+    height:32px
+  }
+  .switch-button {
+    min-width:57px;
+    padding:5px;
+    min-height:56px
+  }
+  .switch-button span {
+    font-size:12px
+  }
+  .dash-button {
+    min-width:62px;
+    min-height:62px
+  }
+  .battle-message {
+    font-size:12px
+  }
+  .boss-hud {
+    left:15%;
+    width:70%;
+    top:10px;
+    font-size:12px
+  }
+  .chapter-intro small {
+    font-size:12px
+  }
+  .overlay {
+    padding:15px
+  }
+  .modal {
+    padding:24px 19px;
+    max-height:91dvh
+  }
+  .modal h2 {
+    font-size:23px
+  }
+  .modal>p {
+    font-size:13px
+  }
+  .modal-actions {
+    gap:9px
+  }
+  .modal-actions .primary-button,.modal-actions .secondary-button {
+    flex:1;
+    min-width:110px;
+    font-size:12px;
+    padding:11px
+  }
+  .reward-grid {
+    grid-template-columns:1fr!important;
+    gap:9px;
+    margin-top:19px
+  }
+  .reward-card {
+    display:grid;
+    grid-template-columns:36px 1fr;
+    gap:4px 15px;
+    padding:13px
+  }
+  .reward-card canvas {
+    width:30px;
+    height:40px;
+    grid-row:1/3
+  }
+  .reward-card strong {
+    font-size:14px
+  }
+  .reward-card small {
+    font-size:11px
+  }
+  .new-work-grid {
+    grid-template-columns:1fr 1fr;
+    gap:9px
+  }
+  .new-work-card {
+    padding:14px;
+    gap:8px
+  }
+  .new-work-card strong {
+    font-size:14px
+  }
+  .new-work-card small {
+    font-size:12px
+  }
+  .page-footer {
+    padding:15px 16px 22px;
+    font-size:11px;
+    gap:10px
+  }
+  .toast {
+    font-size:11px;
+    padding:10px 16px
+  }
+}
+@media(pointer:coarse) {
+  button:not(.swatch):not(.preset):not(.tool) {
+    min-height:42px
+  }
+  .swatch {
+    min-width:38px;
+    min-height:38px
+  }
+  .canvas-footer button {
+    min-height:32px!important
+  }
+  .text-button {
+    padding-top:8px;
+    padding-bottom:8px
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  * {
+    transition:none!important;
+    scroll-behavior:auto!important
+  }
+}
+@media(max-width:600px) {
+  .page-heading {
+    margin-bottom:17px;
+    gap:12px
+  }
+  .page-heading p {
+    font-size:13px
+  }
+  .preview-panel {
+    display:flex;
+    flex-direction:column
+  }
+  .preview-panel .formula-panel {
+    order:0;
+    margin-bottom:12px
+  }
+  .preview-panel .weapon-options {
+    order:1
+  }
+  .preview-panel #craftHint {
+    order:2
+  }
+  .preview-panel .stats-row {
+    order:3
+  }
+  .preview-panel .preview-heading {
+    order:4
+  }
+  .preview-panel .preview-scene {
+    order:5
+  }
+  .preview-panel .trial-tabs {
+    order:6
+  }
+  .preview-panel .anchor-panel {
+    order:7
+  }
+  .preview-panel #saveEquipButton {
+    order:8
+  }
+  .preview-panel>.control-note {
+    order:9
+  }
+  .preview-panel .preview-heading h3 {
+    font-size:15px
+  }
+  .tool {
+    min-height:46px
+  }
+  .tool small {
+    font-size:11px
+  }
+  .palette-group>span {
+    font-size:12px
+  }
+  .map-copy h2 {
+    font-size:19px
+  }
+  .map-rules span {
+    font-size:11px
+  }
+  .section-title {
+    flex-wrap:wrap;
+    gap:5px
+  }
+  .map-banner {
+    align-items:flex-start
+  }
+  .map-copy p {
+    line-height:1.6
+  }
+  .anchor-controls {
+    align-items:flex-start
+  }
+  .anchor-controls canvas {
+    flex-shrink:0
+  }
+  .anchor-controls>div {
+    min-width:0
+  }
+  .anchor-controls .segmented {
+    flex-wrap:wrap
+  }
+  .minor-actions {
+    flex-wrap:wrap
+  }
+  .preset {
+    width:42px;
+    height:42px
+  }
+  .battle-loadout {
+    flex-shrink:0
+  }
+}
+

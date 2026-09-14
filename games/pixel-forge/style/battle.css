@@ -1,0 +1,252 @@
+.battle {
+  max-width:1180px;
+  margin:auto;
+  border:1px solid var(--line);
+  border-radius:8px;
+  overflow:hidden;
+  background:#17272d
+}
+.battle-hud {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:14px 22px;
+  background:#17292f
+}
+.vitality {
+  width:220px;
+  max-width:40%
+}
+.hud-overline {
+  display:block;
+  font-size:11px;
+  color:var(--muted);
+  margin-bottom:4px
+}
+.health-row {
+  display:flex;
+  align-items:center;
+  gap:9px
+}
+.heart {
+  color:#f19383;
+  font-size:19px
+}
+.health-track {
+  height:10px;
+  background:#354b49;
+  flex:1;
+  border-radius:3px;
+  overflow:hidden
+}
+.health-track i {
+  height:100%;
+  width:100%;
+  background:#b6e894;
+  display:block;
+  transition:width .15s
+}
+.health-row>span:last-child {
+  font-size:11px;
+  white-space:nowrap
+}
+.battle-title {
+  text-align:center
+}
+.battle-title .eyebrow {
+  font-size:11px;
+  margin-bottom:2px
+}
+.battle-title h2 {
+  font-size:17px
+}
+.battle-title .subtle {
+  font-size:12px
+}
+.game-stage {
+  position:relative
+}
+#gameCanvas {
+  width:100%;
+  aspect-ratio:1.6;
+  height:auto
+}
+.boss-hud {
+  position:absolute;
+  top:14px;
+  left:25%;
+  width:50%;
+  color:var(--ink);
+  font-size:11px;
+  text-shadow:0 1px 3px #000;
+  text-align:center
+}
+.boss-track {
+  height:7px;
+  background:#382f3f;
+  margin-top:5px;
+  overflow:hidden;
+  border-radius:2px
+}
+.boss-track i {
+  height:100%;
+  width:100%;
+  display:block;
+  background:#d5a0df
+}
+.chapter-intro {
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:10px;
+  background:#13232a44;
+  opacity:0;
+  transition:opacity .25s;
+  text-shadow:0 2px 8px #06140c
+}
+.chapter-intro.show {
+  opacity:1
+}
+.chapter-intro span {
+  font-size:12px;
+  color:var(--gold);
+  letter-spacing:.3em
+}
+.chapter-intro strong {
+  font-size:clamp(20px,4vw,40px);
+  letter-spacing:.1em
+}
+.chapter-intro small {
+  font-size:12px;
+  color:#e6f0db;
+  text-align:center;
+  max-width:80%
+}
+.battle-bottom {
+  padding:14px 20px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  justify-content:flex-end;
+  background:#17292f
+}
+.keyboard-hint {
+  font-size:11px;
+  color:var(--muted);
+  margin-right:auto
+}
+.keyboard-hint span {
+  margin:0 5px
+}
+.battle-loadout {
+  display:flex;
+  gap:8px
+}
+.battle-weapon {
+  position:relative;
+  background:#10232c;
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:4px;
+  color:var(--muted);
+  display:flex;
+  align-items:center;
+  gap:5px
+}
+.battle-weapon.active {
+  border-color:var(--accent);
+  color:var(--accent)
+}
+.battle-weapon canvas {
+  width:39px;
+  height:39px
+}
+.battle-weapon span {
+  max-width:75px;
+  font-size:12px;
+  text-align:left;
+  overflow-wrap:anywhere
+}
+.switch-button,.dash-button {
+  min-width:68px;
+  min-height:61px;
+  border:1px solid #739c82;
+  border-radius:6px;
+  background:#234139;
+  color:var(--accent);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:7px 10px;
+  position:relative;
+  overflow:hidden
+}
+.switch-button span,.dash-button span {
+  font-size:12px;
+  z-index:1
+}
+.switch-button small,.dash-button small {
+  font-size:11px;
+  color:var(--muted);
+  z-index:1
+}
+.dash-button {
+  background:#c4e69e;
+  color:#173023;
+  min-width:76px
+}
+.dash-button small {
+  color:#33532e
+}
+.dash-button i {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#47613744;
+  pointer-events:none
+}
+.joystick {
+  display:none;
+  position:relative;
+  width:88px;
+  height:88px;
+  border:1px solid #82ad9f70;
+  background:#729a6b12;
+  border-radius:50%;
+  touch-action:none;
+  flex-shrink:0
+}
+.joystick i {
+  position:absolute;
+  left:26px;
+  top:26px;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#9fbd9666;
+  border:1px solid #cfdfb766
+}
+.battle-message {
+  font-size:11px;
+  text-align:center;
+  color:var(--muted);
+  min-height:0;
+  padding:0 12px 9px;
+  background:#17292f
+}
+.playing main {
+  padding-top:20px
+}
+.playing .page-footer {
+  display:none
+}
+.playing .main-nav {
+  visibility:hidden
+}

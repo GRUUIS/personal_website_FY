@@ -1,0 +1,78 @@
+.first-adventure .main-nav,.first-adventure #workshopLevel,.first-adventure #helpButton,.first-adventure .page-footer {display:none}
+.first-adventure main {max-width:780px;padding-top:12px}
+.first-adventure .topbar {max-width:1160px;min-height:66px;padding-top:8px;padding-bottom:8px}
+.onboarding {max-width:640px;margin:auto;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.intro-header {display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:40px;padding:7px 22px;background:#203438;color:var(--muted);font-size:13px}
+.intro-header button {padding:4px 12px;min-height:34px}
+.intro-scene {position:relative;background:#32483e;overflow:hidden}
+#introWorld {width:100%;height:auto;aspect-ratio:1.6;touch-action:none;cursor:crosshair}
+.intro-objective {position:absolute;top:14px;left:16px;right:16px;pointer-events:none;background:#142d2ae8;border-radius:5px;padding:7px 12px;color:#f3efd7;font-size:12px}
+.intro-stage-note {position:absolute;bottom:18px;left:12px;right:12px;text-align:center;color:#fff3c8;text-shadow:0 2px 2px #18372c;font-size:16px;pointer-events:none}
+.intro-unlock {position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#112c2be8;color:#f4eccd}
+.intro-unlock>span {font-size:12px;letter-spacing:.15em;color:#ddcf9e}
+.intro-unlock h2 {font-size:32px;margin:3px 0;font-weight:600}
+.intro-unlock p {font-size:15px}
+.intro-unlock small {font-size:12px;color:#bad3b3;margin-top:16px}
+#introRewardArt {width:112px;height:112px;margin-top:12px;border:1px dashed #bfab75;border-radius:50%;background:radial-gradient(#ead28718,transparent 70%)}
+.intro-conversation {display:flex;align-items:flex-start;gap:14px;padding:16px 24px 10px}
+.intro-avatar {width:42px;height:42px;flex-shrink:0;background:#31514a;border-radius:7px;padding:7px}
+.intro-avatar img {width:100%;height:100%;image-rendering:pixelated;object-fit:contain}
+#introSpeaker {font-size:11px;color:var(--muted);display:block;margin-bottom:5px}
+#introCoach {font-size:15px;line-height:1.7}
+.intro-actions {display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:8px 24px 18px}
+#introContext {font-size:12px;color:var(--muted)}
+#introContext:empty {display:none}
+#introPrimary {margin-left:auto;min-height:48px}
+.intro-painting {padding:24px 30px;background:#203236}
+.intro-painting h1 {font-size:25px;font-weight:500;margin-bottom:6px}
+.intro-painting>p {font-size:13px;color:var(--muted)}
+.intro-drawing-layout {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:32px;max-width:636px;margin:20px auto 0;align-items:center}
+.intro-canvas-label {display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-bottom:8px}
+#introPaintCanvas {width:100%;height:auto;aspect-ratio:1;border:4px solid #779282;max-width:320px}
+.intro-paint-tools {display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;font-size:12px}
+.intro-paint-tools .intro-brush {margin-right:auto;display:flex;gap:8px;align-items:center}
+.intro-brush i {width:23px;height:23px;background:#f37569;border:3px solid #f8cdb0;border-radius:4px}
+.intro-paint-tools button {border:1px solid var(--line);border-radius:5px;padding:6px 10px;min-height:34px;color:var(--ink);background:var(--panel)}
+.intro-art-preview {text-align:center}
+#introArtPreview {width:100%;max-width:280px;height:auto;margin:auto}
+#introArtStatus {font-size:14px;font-weight:500}
+.session-tools {display:flex;gap:12px;align-items:center;max-width:1360px;margin:0 auto;padding:10px 38px 0;color:var(--muted);font-size:12px}
+.session-tools .test-label {color:var(--gold);margin-right:auto}
+.session-tools .text-button {min-height:32px}
+.first-adventure .session-tools {max-width:920px}
+.session-tools:not(.testing) {justify-content:flex-end}
+#soundButton {width:auto;min-width:64px;font-size:12px;padding:0 10px}
+#gameCanvas {touch-action:none;cursor:crosshair}
+@media(max-width:650px) {
+  .first-adventure main {padding:12px 12px 24px}
+  .first-adventure .topbar {padding:12px 16px;min-height:65px}
+  .first-adventure .brand small {display:none}
+  .first-adventure .brand {font-size:15px;gap:8px}
+  .first-adventure .brand img {width:29px;height:29px}
+  .first-adventure .top-actions {gap:7px}
+  .session-tools {padding:8px 16px 0;gap:10px;flex-wrap:wrap;font-size:11px}
+  .intro-header {padding:9px 15px;font-size:12px;min-height:45px}
+  .intro-painting {padding:20px 19px 14px}
+  .intro-painting h1 {font-size:22px}
+  .intro-drawing-layout {grid-template-columns:1fr;max-width:258px;gap:8px;margin-top:16px}
+  .intro-art-preview {display:flex;align-items:center;text-align:left;gap:10px}
+  #introArtPreview {width:86px;margin:0;flex-shrink:0}
+  #introArtStatus {font-size:13px}
+  .intro-conversation {padding:17px 16px 10px;gap:10px}
+  .intro-avatar {width:35px;height:35px;padding:5px}
+  #introCoach {font-size:14px;line-height:1.75}
+  .intro-actions {padding:6px 16px 19px;gap:9px}
+  #introContext {width:100%;font-size:11px}
+  #introContext.intro-context-keys {display:none}
+  #introPrimary {width:100%;order:-1}
+  #introContext:not(:empty) {order:-2}
+  #introRepeat,#introEdit {flex:1;min-height:38px;font-size:12px}
+  .intro-objective {top:8px;left:8px;right:8px;font-size:11px;padding:5px 8px}
+  .intro-unlock>span {font-size:11px}
+  #introRewardArt {width:60px;height:60px;margin-top:5px}
+  .intro-unlock h2 {font-size:24px;line-height:1.4}
+  .intro-unlock p {font-size:12px}
+  .intro-unlock small {font-size:11px;margin-top:7px}
+  .intro-stage-note {font-size:12px;bottom:9px}
+}
+@media(prefers-reduced-motion:reduce) {button,.health-track i,.chapter-intro {transition:none}}

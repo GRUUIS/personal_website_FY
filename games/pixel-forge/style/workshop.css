@@ -1,0 +1,648 @@
+.workshop-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1.3fr) minmax(310px,.85fr);
+  gap:22px;
+  align-items:start
+}
+.workshop-top-actions {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap
+}
+.saved-indicator {
+  color:var(--muted);
+  font-size:12px
+}
+.editor-panel,.preview-panel {
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--panel);
+  padding:24px;
+  min-width:0
+}
+.panel-heading {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px
+}
+.name-label {
+  font-size:12px;
+  color:var(--muted);
+  min-width:0
+}
+.name-label input {
+  display:block;
+  max-width:100%;
+  width:260px;
+  color:var(--ink);
+  font-size:21px;
+  background:transparent;
+  border:0;
+  border-bottom:1px solid #42605a;
+  padding:4px 0 7px;
+  border-radius:0;
+  min-height:44px
+}
+.canvas-growth {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  white-space:nowrap
+}
+.canvas-growth>span {
+  color:var(--gold);
+  font-family:monospace;
+  font-size:16px
+}
+.art-tabs {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:20px 0 15px
+}
+.segmented {
+  display:flex;
+  gap:4px
+}
+.segmented button {
+  padding:5px 9px;
+  font-size:11px
+}
+.drawing-surface {
+  display:grid;
+  grid-template-columns:46px minmax(0,1fr);
+  gap:11px
+}
+.toolrail {
+  display:flex;
+  flex-direction:column;
+  gap:5px
+}
+.tool {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  border:1px solid transparent;
+  border-radius:8px;
+  padding:4px 3px;
+  background:#11232a;
+  color:var(--muted);
+  min-height:46px
+}
+.tool span {
+  font-size:17px;
+  line-height:1.15
+}
+.tool small {
+  font-size:11px
+}
+.tool.selected,.tool[aria-pressed=true] {
+  color:var(--accent);
+  border-color:#99bc79;
+  background:#8ebc4722
+}
+.canvas-wrap {
+  min-width:0;
+  width:100%;
+  max-width:440px;
+  justify-self:center
+}
+#paintCanvas {
+  width:100%;
+  aspect-ratio:1;
+  height:auto;
+  touch-action:none;
+  border:1px solid #526c64;
+  border-radius:8px;
+  background:#12232a
+}
+.canvas-footer {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  color:var(--muted);
+  font-size:12px;
+  padding:5px 0
+}
+.canvas-footer>div {
+  display:flex;
+  align-items:center;
+  gap:9px
+}
+.canvas-footer .text-button {
+  font-size:14px;
+  min-width:24px
+}
+.edit-history {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  border-bottom:1px solid var(--line);
+  margin:9px 0 14px;
+  padding-bottom:10px
+}
+.edit-history .text-button {
+  font-size:11px
+}
+.palette {
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:16px
+}
+.palette-group {
+  display:flex;
+  flex-direction:column;
+  gap:6px
+}
+.palette-group>span {
+  font-size:11px;
+  color:var(--muted)
+}
+.palette-colors {
+  display:flex;
+  gap:6px
+}
+.swatch {
+  position:relative;
+  width:40px;
+  height:40px;
+  border:2px solid #17313a;
+  background:var(--swatch);
+  border-radius:8px;
+  box-shadow:0 0 0 1px #4c6259;
+  padding:0
+}
+.swatch.selected {
+  outline:2px solid var(--ink);
+  outline-offset:2px
+}
+.swatch:disabled {
+  opacity:.3;
+  background:repeating-linear-gradient(45deg,var(--swatch),var(--swatch) 4px,#253b42 4px,#253b42 7px)
+}
+.swatch small {
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  font-size:11px;
+  text-shadow:0 1px 3px #000
+}
+.presets-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+  padding-top:12px;
+  border-top:1px solid var(--line)
+}
+.presets {
+  display:flex;
+  gap:8px
+}
+.preset {
+  width:43px;
+  height:43px;
+  background:#14262e;
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:5px
+}
+.preset canvas {
+  width:100%;
+  height:100%
+}
+.presets-row>.text-button {
+  margin-left:auto
+}
+.preview-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+  margin-bottom:13px
+}
+.preview-heading .eyebrow {
+  font-size:11px;
+  margin:0
+}
+.live-label {
+  font-size:12px;
+  color:var(--accent);
+  white-space:nowrap
+}
+.preview-scene {
+  position:relative;
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  background:#15272a
+}
+#previewCanvas {
+  width:100%;
+  aspect-ratio:1.6;
+  height:auto
+}
+.preview-scene .glass-button {
+  position:absolute;
+  bottom:12px;
+  right:12px;
+  font-size:11px;
+  min-height:40px;
+  padding:8px 14px
+}
+.trial-tabs {
+  display:flex;
+  gap:6px;
+  justify-content:center;
+  margin:12px 0 19px
+}
+.trial-tabs button {
+  font-size:12px;
+  padding:5px 15px
+}
+.weapon-options {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px
+}
+.weapon-options label,.formula-select {
+  font-size:11px;
+  color:var(--muted)
+}
+select {
+  width:100%;
+  border:1px solid var(--line);
+  background:#12262e;
+  color:var(--ink);
+  padding:9px 10px;
+  border-radius:4px;
+  min-height:46px;
+  margin-top:5px
+}
+#craftHint {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:9px;
+  font-size:12px
+}
+.stats-row {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin:0;
+  padding:14px 0 4px
+}
+.stats-row>div {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  border-right:1px solid var(--line)
+}
+.stats-row>div:last-child {
+  border:0
+}
+.stats-row span {
+  font-size:12px;
+  color:var(--muted)
+}
+.stats-row strong {
+  font-size:14px;
+  font-weight:500
+}
+.formula-panel .section-title {
+  margin-bottom:9px
+}
+.formula-panel .section-title h3 {
+  font-size:14px
+}
+.formula-panel .section-title .subtle {
+  font-size:12px
+}
+.recipe-track {
+  display:flex;
+  height:10px;
+  background:#41585255;
+  border-radius:5px;
+  overflow:hidden
+}
+#fireBar {
+  background:var(--fire)
+}
+#iceBar {
+  background:var(--ice)
+}
+#electricBar {
+  background:var(--electric)
+}
+.recipe-labels {
+  display:grid;
+  grid-auto-columns:minmax(0,1fr);
+  grid-auto-flow:column;
+  gap:8px;
+  margin:10px 0 18px
+}
+.recipe-chip {
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  padding:10px;
+  border:1px solid var(--line);
+  border-top:2px solid var(--element);
+  border-radius:7px;
+  background:#10212980
+}
+.recipe-chip.empty {
+  border-top-color:var(--line)
+}
+.recipe-chip-name {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:5px;
+  font-size:12px
+}
+.recipe-chip-name small {
+  color:var(--muted);
+  font-size:11px
+}
+.recipe-chip strong {
+  color:var(--element);
+  font-size:21px;
+  line-height:1.25;
+  font-variant-numeric:tabular-nums
+}
+.recipe-chip.empty strong {
+  color:var(--muted)
+}
+.effect-dot {
+  display:inline-block;
+  width:6px;
+  height:6px;
+  border-radius:1px;
+  background:var(--dot)
+}
+.formula-select {
+  display:block
+}
+.formula-status {
+  font-size:12px;
+  color:var(--accent);
+  padding:10px 0 0
+}
+.formula-status.inactive {
+  color:var(--gold)
+}
+.formula-tip,.formula-effect {
+  display:block;
+  color:var(--muted);
+  font-size:12px
+}
+.formula-effect {
+  margin-top:8px
+}
+.formula-state>strong {
+  font-size:12px;
+  font-weight:500
+}
+.formula-requirements {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:8px
+}
+.formula-requirement {
+  color:var(--muted);
+  border:1px solid var(--line);
+  border-radius:6px;
+  padding:4px 8px
+}
+.formula-requirement b {
+  font-weight:600
+}
+.formula-requirement small {
+  font-size:11px
+}
+.formula-requirement.met {
+  border-color:var(--element);
+  color:var(--element)
+}
+.craft-trait {
+  color:var(--accent);
+  padding:3px 8px;
+  background:#c4e69e0b;
+  border-radius:5px
+}
+.craft-trait.tradeoff {
+  color:var(--muted);
+  background:#10212980
+}
+.anchor-panel {
+  border-top:1px solid var(--line);
+  padding:12px 0;
+  margin:18px 0 0;
+  font-size:12px;
+  color:var(--muted)
+}
+summary {
+  cursor:pointer
+}
+.anchor-controls {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:14px
+}
+.anchor-controls canvas {
+  width:110px;
+  height:110px;
+  background:#13242a;
+  border:1px solid var(--line);
+  touch-action:none
+}
+.anchor-controls>div {
+  flex:1
+}
+.anchor-controls p {
+  font-size:12px;
+  margin:9px 0
+}
+.preview-heading h3 {
+  font-size:14px;
+  font-weight:600
+}
+.palette-group>span {
+  font-size:12px
+}
+.tool small {
+  font-size:11px
+}
+.formula-panel {
+  scroll-margin-top:16px
+}
+.formula-panel .section-title {
+  flex-wrap:wrap;
+  gap:5px
+}
+.weapon-options label {
+  min-width:0
+}
+.weapon-options select {
+  white-space:normal
+}
+.palette-note{font-size:12px;margin:0 0 8px}
+
+.workshop .palette-note {
+  margin-top:18px
+}
+.workshop .preview-heading h3 {
+  font-size:17px
+}
+.workshop .live-label {
+  font-size:11px
+}
+.workshop .live-label::before {
+  content:"";
+  display:inline-block;
+  width:6px;
+  height:6px;
+  margin-right:6px;
+  border-radius:50%;
+  background:var(--accent)
+}
+.workshop .weapon-options {
+  margin-top:18px
+}
+.workshop .weapon-options label,.workshop .formula-select {
+  font-size:12px
+}
+.workshop .weapon-options select,.workshop .formula-select select {
+  border-radius:8px;
+  min-height:46px;
+  font-size:14px
+}
+.workshop .swatch {
+  width:40px;
+  height:40px
+}
+.workshop .preset {
+  width:46px;
+  height:46px;
+  border-radius:7px
+}
+.workshop .workshop-stats {
+  margin:16px 0 20px;
+  color:var(--muted);
+  font-size:12px;
+  border-bottom:1px solid var(--line);
+  padding-bottom:12px
+}
+.workshop .workshop-stats summary,.workshop .anchor-panel summary {
+  min-height:32px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  list-style:none
+}
+.workshop .workshop-stats summary::before,.workshop .anchor-panel summary::before {
+  content:"＋";
+  font-size:15px;
+  color:var(--accent)
+}
+.workshop .workshop-stats[open] summary::before,.workshop .anchor-panel[open] summary::before {
+  content:"−"
+}
+.workshop .workshop-stats .stats-row {
+  margin:0;
+  padding:12px 0 4px
+}
+.workshop .workshop-stats .stats-row strong {
+  color:var(--ink)
+}
+.workshop .trial-tabs {
+  margin:12px 0 0;
+  justify-content:flex-start
+}
+.workshop .trial-tabs button {
+  min-height:38px;
+  flex:1
+}
+.workshop .tool,.workshop .segmented button {
+  min-height:44px
+}
+.workshop #saveEquipButton {
+  white-space:nowrap
+}
+
+@media(max-width:1080px) {
+  .workshop .palette {
+    gap:12px
+  }
+  .workshop .editor-panel,.workshop .preview-panel {
+    padding:18px
+  }
+  .workshop .recipe-chip {
+    padding:8px
+  }
+}
+@media(min-width:601px) and (max-width:800px) {
+  .workshop .preview-panel {
+    display:block
+  }
+  .workshop .preview-scene {
+    max-height:340px
+  }
+  .workshop #previewCanvas {
+    max-height:340px;
+    object-fit:contain
+  }
+}
+@media(max-width:600px) {
+  .workshop .workshop-top-actions {
+    align-items:center;
+    flex-wrap:wrap
+  }
+  .workshop .saved-indicator {
+    width:100%;
+    order:3;
+    font-size:11px
+  }
+  .workshop .workshop-top-actions .secondary-button,.workshop #saveEquipButton {
+    flex:1;
+    min-height:44px
+  }
+  .workshop .preview-panel {
+    display:flex;
+    flex-direction:column
+  }
+  .workshop .preview-panel>* {
+    order:0
+  }
+  .workshop .preview-panel .preview-heading {order:0}
+  .workshop .preview-panel .preview-scene {order:1}
+  .workshop .preview-panel .trial-tabs {order:2}
+  .workshop .preview-panel .weapon-options {order:3}
+  .workshop .preview-panel #craftHint {order:4}
+  .workshop .preview-panel .workshop-stats {order:5}
+  .workshop .preview-panel .formula-panel {order:6;margin-bottom:0}
+  .workshop .preview-panel .anchor-panel {order:7}
+  .workshop .preview-panel>.control-note {order:8}
+  .workshop .weapon-options select,.workshop .formula-select select {
+    font-size:16px
+  }
+  .workshop .editor-panel,.workshop .preview-panel {
+    padding:16px
+  }
+  .workshop .recipe-chip strong {
+    font-size:22px
+  }
+}

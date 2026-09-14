@@ -1,0 +1,153 @@
+/* Keep the next action visible; details open only when needed. */
+.topbar {min-height:74px}
+main {padding-top:24px}
+.page-heading {margin-bottom:20px}
+.page-heading .eyebrow {font-size:11px;margin-bottom:5px;letter-spacing:.1em}
+.primary-button,.secondary-button {border-radius:8px}
+.armory .page-heading {align-items:center}
+.armory .page-heading h1 {font-size:28px}
+.loadout-guide {display:flex;align-items:center;gap:14px;padding:16px 20px;margin-bottom:18px;border:1px solid #76975c70;border-radius:10px;background:linear-gradient(110deg,#a6d57b15,#a6d57b04)}
+.guide-symbol {display:grid;place-items:center;width:42px;height:42px;flex-shrink:0;border-radius:9px;background:#bcdf9120;color:var(--accent);font-size:26px}
+.loadout-guide strong {font-size:15px;font-weight:600}
+.loadout-guide p {font-size:12px;color:var(--muted);margin-top:3px}
+.loadout-steps {display:flex;align-items:center;gap:11px;margin-left:auto;white-space:nowrap;font-size:12px;color:var(--muted)}
+.loadout-steps span {padding:6px 10px;border-radius:6px}
+.loadout-steps .current {color:var(--accent);background:#c4e69e14}
+.loadout-steps i {font-style:normal}
+.armory .armory-layout {display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:20px;align-items:start}
+.armory .map-banner {min-height:120px;padding:12px 18px 12px 12px;gap:18px;border-radius:12px}
+.armory .map-banner canvas {width:164px;max-width:27%;border-radius:7px}
+.armory .map-copy h2 {font-size:23px;letter-spacing:.02em}
+.armory .map-copy .eyebrow {font-size:11px;margin-bottom:1px;letter-spacing:.09em}
+.armory .map-copy p {padding:0;margin-top:6px;font-size:13px}
+.armory .map-rules {margin-top:5px}
+.armory .map-rules span {border:0;background:#071c2355;color:#ccdfca;padding:2px 8px;border-radius:4px}
+.armory .collection-panel {width:100%;order:initial}
+.armory .section-title {margin:0 0 12px}
+.armory .section-title h2 {font-size:16px}
+.armory .weapon-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.armory .weapon-grid:has(>.weapon-card:nth-child(2):last-child) {grid-template-columns:repeat(2,minmax(0,1fr))}
+.armory .weapon-card {padding:12px;border-radius:10px;border-color:#3d5558;gap:5px}
+.armory .weapon-card[aria-pressed=true] {border-color:var(--accent);background:#243a35;box-shadow:0 0 0 1px #c4e69e35}
+.armory .weapon-card.selected:not([aria-pressed=true]) {box-shadow:none;border-color:#769386}
+.armory .weapon-card canvas {height:132px;margin-bottom:6px;border-radius:6px}
+.armory .weapon-card small {font-size:12px}
+.armory .card-tag {right:18px;top:18px;padding:3px 7px;font-size:11px;background:#152a20ed;color:var(--accent)}
+.armory .card-tag.available {background:#12252bd9;color:var(--muted)}
+.armory .mini-track {height:5px}
+.armory .filter-row {margin-bottom:12px}
+.armory .loadout-panel {display:block;position:sticky;top:18px;padding:18px;border-radius:12px;order:initial;width:100%;background:linear-gradient(145deg,#21383a,#17292e)}
+.armory .loadout-panel>h2 {font-size:16px;margin:0}
+.armory .loadout-slots {display:grid;grid-template-columns:1fr;margin-top:12px;gap:8px}
+.armory .loadout-slot {gap:10px;padding:10px;min-height:64px;border-radius:7px}
+.armory .loadout-slot small {font-size:11px;font-weight:400}
+.armory .loadout-slot strong {font-size:13px;line-height:1.5}
+.armory .loadout-slot canvas {width:42px;height:42px}
+.armory .control-note {font-size:11px;margin:10px 0;color:var(--muted)}
+.armory .selection-details {display:block;text-align:center;margin:14px 0 0;padding:0;border-top:1px solid var(--line);border-bottom:0}
+.armory .selection-details summary {display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);min-height:44px;list-style:none;text-align:left}
+.armory .selection-details summary::after {content:'＋';margin-left:auto;color:var(--accent);font-size:17px}
+.armory .selection-details[open] summary::after {content:'−'}
+.armory .selection-details>canvas {width:86px;height:86px;margin:10px auto}
+.armory .selection-details>h3 {font-size:14px}
+.armory .selection-details>.mini-recipe {justify-content:center;margin:9px 0}
+.armory .selection-details>.equipment-actions {margin:12px 0 8px}
+.armory .selection-details>.secondary-button {margin:0;font-size:12px}
+.armory .minor-actions {margin:8px 0;gap:16px}
+.departure-actions {padding-top:14px;border-top:1px solid var(--line);margin-top:2px}
+.departure-actions>span {display:block;font-size:12px;color:var(--accent);margin-bottom:9px;overflow-wrap:anywhere}
+.departure-actions .primary-button {min-height:49px;box-shadow:0 3px 0 #708859;font-size:15px}
+.armory .progress-panel {grid-column:1/-1;padding:0 17px;margin:0;border-radius:9px;background:#13242a}
+.armory .progress-panel summary {display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:49px;font-size:12px;color:var(--muted);list-style:none}
+.armory .progress-panel summary::after {content:'＋';color:var(--accent)}
+.armory .progress-panel[open] summary::after {content:'−'}
+.armory .progress-panel summary>.subtle {margin-left:auto}
+.armory .progress-panel .route {margin:7px 0 14px}
+.armory .progress-panel>.text-button {margin:8px 0 12px}
+.armory.learning-loadout .weapon-grid {outline:2px dashed #c4e69e90;outline-offset:6px;border-radius:9px}
+.armory.learning-loadout .loadout-guide {border-color:#abd282;background:#9ac56a18}
+.armory.learning-loadout .departure-actions>span {color:var(--gold)}
+.modal .help-section {padding:12px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted)}
+.modal .help-section summary {color:var(--ink);min-height:30px}
+.modal .help-section p {padding-top:8px;line-height:1.8}
+.modal .help-basics {display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+.modal .help-basics span {border:1px solid var(--line);border-radius:7px;padding:9px 12px;color:var(--accent);font-size:13px}
+.modal .volume-label {display:flex;align-items:center;gap:18px;margin-top:22px;font-size:13px}
+.modal .reward-card small,.modal .new-work-card small {font-size:13px}
+.modal .reward-card {border-radius:10px}
+@media(min-width:701px) and (max-height:820px) {
+  body:not(.first-adventure) .topbar {min-height:64px;padding-top:8px;padding-bottom:8px}
+  body:not(.first-adventure) .session-tools {padding-top:2px}
+  body:not(.first-adventure) main {padding-top:14px}
+  .armory .page-heading {margin-bottom:12px}
+  .armory .page-heading h1 {font-size:24px}
+  .armory .loadout-guide {padding:11px 16px;margin-bottom:14px}
+  .armory .guide-symbol {width:34px;height:34px}
+  .armory .map-banner {min-height:100px;padding:9px 14px;gap:15px}
+  .armory .map-banner canvas {width:126px}
+  .armory .map-copy h2 {font-size:20px}
+  .armory .map-copy p {margin-top:4px;font-size:12px}
+  .armory .weapon-card canvas {height:104px}
+  .armory .armory-layout {gap:16px}
+  .first-adventure .onboarding {max-width:min(620px,calc((100dvh - 310px)*1.6))}
+  .first-adventure .intro-painting {padding:16px 24px}
+  .first-adventure .intro-drawing-layout {max-width:490px;margin-top:12px;gap:20px}
+  .first-adventure #introPaintCanvas {max-width:240px}
+  .first-adventure .intro-conversation {padding:12px 20px 6px}
+  .first-adventure .intro-actions {padding:6px 20px 14px}
+}
+@media(max-width:1080px) {
+  .armory .armory-layout {grid-template-columns:minmax(0,1fr) 250px;gap:18px}
+  .armory .weapon-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .loadout-steps {gap:5px}
+}
+@media(max-width:700px) {
+  .armory .page-heading {flex-direction:row;gap:12px;align-items:center;margin-bottom:15px}
+  .armory .page-heading h1 {font-size:23px}
+  .armory .page-heading .secondary-button {font-size:12px;padding:8px 12px;white-space:nowrap}
+  .armory .page-heading .eyebrow {font-size:10px}
+  .armory .armory-layout {grid-template-columns:1fr;gap:18px}
+  .loadout-guide {padding:12px;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+  .guide-symbol {width:34px;height:34px;font-size:23px}
+  .loadout-guide strong {font-size:14px}
+  .loadout-guide p {font-size:12px}
+  .loadout-steps {display:none}
+  .armory .map-banner {padding:11px;gap:12px;min-height:105px;align-items:center}
+  .armory .map-banner canvas {width:92px;max-width:27%}
+  .armory .map-copy h2 {font-size:19px}
+  .armory .map-copy p {font-size:12px}
+  .armory .map-rules {gap:5px}
+  .armory .map-rules span {font-size:10px;padding:1px 5px}
+  .armory .map-number {display:none}
+  .armory .weapon-card canvas {height:116px}
+  .armory .weapon-card {padding:10px}
+  .armory .weapon-card strong {font-size:13px}
+  .armory .weapon-card small {font-size:11px}
+  .armory .card-tag {top:16px;right:15px}
+  .armory .loadout-panel {position:static;padding:14px}
+  .armory .loadout-slots {grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+  .armory .selection-details {margin-top:4px}
+  .armory .selection-details .equipment-actions {margin-top:12px}
+  .armory .departure-actions {position:fixed;bottom:0;left:0;right:0;z-index:10;padding:10px 16px calc(12px + env(safe-area-inset-bottom));background:#12272bf5;border-top:1px solid #59725f;backdrop-filter:blur(14px);display:flex;align-items:center;gap:12px}
+  .armory .departure-actions>span {font-size:11px;line-height:1.6;margin:0;flex:1;min-width:0}
+  .armory .departure-actions .primary-button {width:auto;flex:0 0 auto;min-width:170px;font-size:14px;min-height:46px;padding:10px 15px}
+  .armory {padding-bottom:85px}
+  .workshop {padding-bottom:100px}
+  .workshop .workshop-top-actions {position:fixed;bottom:0;left:0;right:0;z-index:10;padding:10px 16px calc(8px + env(safe-area-inset-bottom));background:#12272bf5;border-top:1px solid #59725f;backdrop-filter:blur(14px);gap:5px 10px;display:flex;flex-wrap:wrap}
+  .workshop .saved-indicator {width:100%;order:3;text-align:center;font-size:10px}
+  .workshop .workshop-top-actions .secondary-button {flex:0 0 80px;min-height:42px}
+  .workshop #saveEquipButton {flex:1;min-height:42px}
+  .workshop .page-heading {margin-bottom:14px}
+  .toast {bottom:100px;font-size:12px}
+}
+@media(max-width:600px) {
+  .topbar {padding:11px 16px}
+  .brand small {display:none}
+  main {padding-top:17px}
+  .session-tools {padding-top:3px}
+  .workshop .palette {display:flex;flex-wrap:wrap;gap:12px 16px}
+  .workshop .palette-colors {gap:6px}
+  .workshop .art-tabs {margin:12px 0}
+  .nav-link {padding:5px 12px}
+  .modal .reward-card {display:grid;grid-template-columns:34px 1fr;gap:3px 13px;padding:14px}
+}

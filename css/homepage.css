@@ -282,6 +282,37 @@ p {
     list-style: none;
 }
 
+.experience-item {
+    display: grid;
+    gap: 7px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+}
+
+.experience-title {
+    display: grid;
+    gap: 5px;
+}
+
+.experience-title strong {
+    color: var(--ink);
+    line-height: 1.4;
+}
+
+.experience-title time,
+.experience-item > span {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.experience-item p {
+    margin: 3px 0 0;
+    color: #565656;
+    line-height: 1.65;
+}
+
 .filter-bar {
     display: flex;
     gap: 10px;
@@ -368,6 +399,27 @@ p {
 .project-card a {
     justify-self: start;
     border-bottom: 1px solid var(--ink);
+}
+
+.project-card .play-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 0 16px;
+    color: var(--paper);
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    font-weight: 800;
+}
+
+.project-card .play-link:hover,
+.project-card .play-link:focus-visible {
+    color: var(--ink);
+    background: var(--accent);
+}
+
+.playable-card {
+    box-shadow: inset 0 4px 0 var(--accent);
 }
 
 .poster {

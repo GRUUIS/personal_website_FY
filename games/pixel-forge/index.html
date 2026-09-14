@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111d24">
+  <meta name="description" content="绘制像素武器，选择攻击类型与元素配方，完成十关战斗。">
+  <title>像素造物师 · Pixel Forge</title>
+  <link rel="icon" href="img/branding/pixel-forge-icon.png" type="image/png">
+  <link rel="stylesheet" href="style/main.css">
+  <script defer src="scripts/data.js"></script>
+  <script defer src="scripts/shape.js"></script>
+  <script defer src="scripts/audio.js"></script>
+  <script defer src="scripts/editor.js"></script>
+  <script defer src="scripts/library.js"></script>
+  <script defer src="scripts/game.js"></script>
+  <script defer src="scripts/renderer.js"></script>
+  <script defer src="scripts/ui-common.js"></script>
+  <script defer src="scripts/ui-armory.js"></script>
+  <script defer src="scripts/ui-workshop.js"></script>
+  <script defer src="scripts/ui-onboarding.js"></script>
+  <script defer src="scripts/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html"><img src="img/mark.svg" alt="" width="34" height="34"><span>像素造物师<small>PIXEL FORGE</small></span></a>
+    <nav class="main-nav" aria-label="主要界面"><button id="navArmory" class="nav-link selected">武器库</button><button id="navWorkshop" class="nav-link">编辑武器</button></nav>
+    <div class="top-actions"><span id="workshopLevel" class="level-badge">工坊 Lv.1</span><button id="soundButton" class="icon-button" aria-label="开启声音" aria-pressed="false">音效关</button><button id="helpButton" class="icon-button" aria-label="操作与玩法说明">?</button></div>
+  </header>
+  <div id="sessionTools" class="session-tools"><span id="testLabel" class="test-label hidden">新手测试 · 独立存档</span><button id="freshTestButton" class="text-button">从1级测试</button><button id="returnSaveButton" class="text-button hidden">返回原存档</button></div>
+  <main>
+    <section id="onboarding" class="onboarding hidden" aria-label="第一把武器与新手冒险">
+      <div class="intro-header"><span id="introPlace">失色的森林</span><button id="introPause" class="glass-button hidden">暂停</button></div>
+      <div id="introScene" class="intro-scene">
+        <canvas id="introWorld" width="960" height="600" aria-label="失色的森林，等待你找回颜色"></canvas>
+        <p id="introObjective" class="intro-objective hidden" aria-live="polite"></p>
+        <p id="introStageNote" class="intro-stage-note"></p>
+        <div id="introUnlock" class="intro-unlock hidden"><span>首胜奖励 · 已解锁</span><canvas id="introRewardArt" width="144" height="144" aria-label="你的绘画作品获得回旋攻击"></canvas><h2>回旋器</h2><p>飞出去，再回到你手里。</p><small>保留你的图案，换上回旋攻击。</small></div>
+      </div>
+      <section id="introPainting" class="intro-painting hidden" aria-label="绘制第一把武器">
+        <h1 id="introPaintTitle">给它添上你的第一笔。</h1><p>点击或拖动画布涂色。</p>
+        <div class="intro-drawing-layout"><div><div class="intro-canvas-label"><span>你的画布</span><span>8 × 8</span></div><canvas id="introPaintCanvas" width="512" height="512" aria-label="8乘8像素画布，方向键移动，空格涂上火红"></canvas><div class="intro-paint-tools"><span class="intro-brush"><i aria-hidden="true"></i>火红画笔</span><button id="introClear" class="hidden">清空</button><button id="introUndo" disabled>撤销</button></div></div><div class="intro-art-preview"><canvas id="introArtPreview" width="280" height="210" aria-label="你画的武器会出现在主角手中"></canvas><strong id="introArtStatus">它正等着你的颜色。</strong></div></div>
+      </section>
+      <div class="intro-conversation"><div class="intro-avatar" aria-hidden="true"><img src="img/mark.svg" alt=""></div><div><span id="introSpeaker">阿绘 · 画册守护者</span><p id="introCoach" aria-live="polite"></p></div></div>
+      <div class="intro-actions"><span id="introContext"></span><button id="introRepeat" class="secondary-button hidden">再试一轮</button><button id="introEdit" class="text-button hidden">修改武器图案</button><button id="introPrimary" class="primary-button">画出第一把武器 →</button></div>
+    </section>
+    <section id="armory" class="armory hidden" aria-label="武器库与关前选装">
+      <div class="page-heading"><div><span id="armoryStatus" class="eyebrow">准备下一场冒险</span><h1>带哪一把出发？</h1></div><button id="newWorkButton" class="secondary-button compact">＋ 画新武器</button></div>
+      <div id="loadoutGuide" class="loadout-guide" aria-live="polite"><span class="guide-symbol" aria-hidden="true">⇄</span><div><strong id="loadoutGuideTitle">每关结束，都能换武器</strong><p id="loadoutGuideText">点选一把，带去下一关。</p></div><div class="loadout-steps" aria-label="出战步骤"><span id="chooseStep" class="current">1 选武器</span><i aria-hidden="true">→</i><span id="departStep">2 出发</span></div></div>
+      <div class="armory-layout">
+        <div class="map-banner" id="mapBanner"><canvas id="mapCanvas" width="288" height="180" aria-label="下一关地形缩略图"></canvas><div class="map-copy"><span class="eyebrow" id="chapterName">第一章 · 纸叶林</span><h2 id="mapTitle">工坊草地</h2><div id="mapRules" class="map-rules"></div><p id="mapHint"></p></div><span class="map-number" id="mapNumber">01 / 10</span></div>
+        <div class="collection-panel"><div class="section-title"><h2>我的武器 <span id="collectionCount">1</span></h2><span class="subtle">点击即装备</span></div><div id="typeFilters" class="filter-row" aria-label="按武器类型筛选"></div><div id="weaponGrid" class="weapon-grid"></div></div>
+        <aside class="loadout-panel"><h2>本关装备</h2><div id="loadoutSlots" class="loadout-slots"></div><p class="control-note"></p><details class="selection-details"><summary>武器详情与改造</summary><canvas id="selectedArtwork" width="192" height="192" aria-label="所选作品"></canvas><h3 id="selectedName"></h3><p id="selectedType" class="subtle"></p><div id="selectedRecipe" class="mini-recipe"></div><p id="selectedFormula" class="formula-caption"></p><div class="equipment-actions"><button id="equipMain" class="secondary-button">设为主武器</button><button id="equipBackup" class="secondary-button">设为备用武器</button></div><button id="editWorkButton" class="secondary-button full">修改图案</button><div class="minor-actions"><button id="copyWorkButton" class="text-button">复制</button><button id="exportWorkButton" class="text-button">导出图片</button><button id="deleteWorkButton" class="text-button">删除</button></div></details><div class="departure-actions"><span id="departureHint">准备好了就出发</span><button id="startButton" class="primary-button full">出发 →</button></div></aside>
+        <details class="progress-panel"><summary><span>冒险进度</span><span id="progressText" class="subtle"></span></summary><div id="route" class="route" aria-label="十关进度"></div><div id="nextUnlock" class="next-unlock"></div><button id="newJourneyButton" class="text-button">重新开始闯关</button></details>
+      </div>
+    </section>
+    <section id="workshop" class="workshop hidden" aria-label="像素工坊">
+      <div class="page-heading"><div><h1>编辑武器</h1><p>画图案 → 试攻击 → 保存武器</p></div><div class="workshop-top-actions"><span id="savedIndicator" class="saved-indicator" role="status">草稿自动保存</span><button id="backToArmory" class="secondary-button">返回</button><button id="saveEquipButton" class="primary-button">保存武器 ✓</button></div></div>
+      <div class="workshop-layout">
+        <section class="editor-panel"><div class="panel-heading"><label class="name-label" for="weaponName">武器名称<input id="weaponName" maxlength="22" autocomplete="off" value="珊瑚短剑"></label><div class="canvas-growth"><span id="canvasSize">8 × 8</span><button id="expandButton" class="text-button">扩展画布</button></div></div>
+          <div class="art-tabs"><div class="segmented" aria-label="绘制部位"><button class="selected" id="bodyTab">武器本体</button><button id="projectileTab" class="hidden">弹丸样式</button></div><div class="segmented" aria-label="当前图层"><button id="baseLayer" class="selected">主体</button><button id="decorLayer">装饰图层 · 3级</button></div></div>
+          <p class="subtle palette-note">选个颜色，开始画</p>
+          <div id="palette" class="palette" aria-label="颜料色板"></div>
+          <div class="drawing-surface"><div class="toolrail" aria-label="绘画工具"><button class="tool selected" data-tool="pencil" aria-label="画笔 B"><span>✎</span><small>画笔</small></button><button class="tool" data-tool="eraser" aria-label="橡皮 E"><span>◇</span><small>橡皮</small></button><button class="tool" data-tool="fill" aria-label="填色 G"><span>▨</span><small>填色</small></button><button class="tool" data-tool="picker" aria-label="吸色 I"><span>◉</span><small>吸色</small></button><button class="tool" data-tool="select" data-unlock="5" aria-label="框选 Lv.5"><span>▧</span><small>框选</small></button><button class="tool" data-tool="pan" aria-label="平移 H"><span>✥</span><small>平移</small></button><button class="tool" id="mirrorButton" aria-label="左右镜像 Lv.3" aria-pressed="false"><span>◧</span><small>镜像</small></button></div><div class="canvas-wrap"><canvas id="paintCanvas" width="576" height="576" aria-label="像素画布，方向键移动光标，空格落笔" tabindex="0"></canvas><div class="canvas-footer"><span id="paintStatus">画笔 · 珊瑚</span><div><button id="zoomOut" class="text-button" aria-label="缩小画布">−</button><span id="zoomValue">1×</span><button id="zoomIn" class="text-button" aria-label="放大画布">＋</button></div></div></div></div>
+          <div class="edit-history"><button id="undoButton" class="text-button">↶ 撤销</button><button id="redoButton" class="text-button">↷ 重做</button><button id="fillSelectionButton" class="text-button">填充选区</button><button id="replaceButton" class="text-button">批量换色</button><button id="clearButton" class="text-button push-right">清空画稿</button></div>
+          <div class="presets-row"><span class="subtle">快速底稿</span><div id="presets" class="presets"></div><button id="blankButton" class="text-button">空白</button></div>
+        </section>
+        <aside class="preview-panel"><div class="preview-heading"><h3>攻击预览</h3><span class="live-label">自动攻击演示</span></div><div class="preview-scene"><canvas id="previewCanvas" width="960" height="600" aria-label="原画攻击与地图环境试用"></canvas><button id="tryButton" class="glass-button">试用武器</button></div><div id="trialTabs" class="trial-tabs" aria-label="试用环境"><button data-environment="plain" class="selected">普通</button><button data-environment="forest">森林</button><button data-environment="waterfall">瀑布</button></div>
+          <div class="weapon-options"><label>攻击方式<select id="weaponType"></select></label><label>攻击风格<select id="craftSelect"></select></label></div><p id="craftHint" class="subtle"></p><details class="workshop-stats"><summary>攻击数值</summary><div class="stats-row"><div><span>距离</span><strong id="statRange"></strong></div><div><span>范围</span><strong id="statCoverage"></strong></div><div><span>攻速</span><strong id="statSpeed"></strong></div></div></details>
+          <div class="formula-panel"><div class="section-title"><h3>元素配比</h3><span class="subtle">装饰色不计入</span></div><div class="recipe-track" aria-hidden="true"><i id="fireBar"></i><i id="iceBar"></i><i id="electricBar"></i></div><div id="recipeLabels" class="recipe-labels" aria-live="polite"></div><label class="formula-select">混色配方<select id="formulaSelect"></select></label><div id="formulaStatus" class="formula-status" aria-live="polite"></div></div>
+          <details class="anchor-panel"><summary>外观微调</summary><div class="anchor-controls"><canvas id="anchorCanvas" width="160" height="160" aria-label="点击设置当前视觉锚点"></canvas><div><div class="segmented"><button id="gripAnchor" class="selected">握持点</button><button id="muzzleAnchor">发射点</button></div><p class="subtle">点击原图调整位置，只影响显示。</p><button id="resetAnchors" class="text-button">恢复默认位置</button></div></div></details>
+          <p class="control-note">图案决定外观，颜色赋予元素。</p>
+        </aside>
+      </div>
+    </section>
+    <section id="battle" class="battle hidden" aria-label="战斗">
+      <div class="battle-hud"><div class="vitality"><span id="battleWeaponName" class="hud-overline"></span><div class="health-row"><span class="heart">♥</span><div class="health-track"><i id="healthFill"></i></div><span id="healthText">100</span></div></div><div class="battle-title"><span id="levelNumber" class="eyebrow"></span><h2 id="levelName"></h2><span id="killCounter" class="subtle"></span></div><button id="pauseButton" class="glass-button" aria-label="暂停">Ⅱ</button></div>
+      <div class="game-stage"><canvas id="gameCanvas" width="960" height="600" aria-label="战场：WASD移动，空格闪避，Q换武器"></canvas><div id="bossHud" class="boss-hud hidden"><span id="bossName"></span><div class="boss-track"><i id="bossFill"></i></div></div><div id="chapterIntro" class="chapter-intro"><span id="introNumber"></span><strong id="introName"></strong><small id="introHint"></small></div></div>
+      <div class="battle-bottom"><div id="joystick" class="joystick" aria-label="拖动摇杆移动"><i id="joystickStick"></i></div><div class="keyboard-hint"><kbd>W A S D</kbd> 移动 <span>·</span> <kbd>空格</kbd> 闪避 <span>·</span> <kbd>Q</kbd> 换武器</div><div id="battleLoadout" class="battle-loadout"></div><button id="switchButton" class="switch-button"><span>切换武器</span><small id="switchState">Q</small></button><button id="dashButton" class="dash-button"><span>闪避</span><small id="dashState">空格</small><i id="dashCooldown"></i></button></div><p id="battleMessage" class="battle-message" aria-live="polite"></p>
+    </section>
+  </main>
+  <div id="overlay" class="overlay hidden"><section id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></section></div>
+  <div id="toast" class="toast" role="status"></div>
+  <footer class="page-footer"><span>像素造物师</span><span>画武器 · 带着作品去冒险</span></footer>
+</body>
+</html>

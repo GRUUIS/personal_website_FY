@@ -1,0 +1,20 @@
+{
+  "name": "喵将对决 Pawjong",
+  "short_name": "喵将对决",
+  "description": "四张开河、无限吃碰杠、连击赢高分。支持直接人机试玩和局域网双人对战。",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#071f1b",
+  "theme_color": "#071f1b",
+  "orientation": "any",
+  "scope": "./",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "./images/game-icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
