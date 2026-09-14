@@ -1,0 +1,194 @@
+:root {
+    color-scheme: light;
+    --ink: #352b22;
+    --muted: #7f6c5b;
+    --paper: #fffaf0;
+    --line: #cdbda4;
+    --accent: #a84d36;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.72), transparent 28%),
+        repeating-linear-gradient(0deg, rgba(92, 67, 42, 0.025) 0 1px, transparent 1px 5px),
+        #eadfc9;
+    font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+.game-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1040px, calc(100% - 32px));
+    min-height: 86px;
+    margin: 0 auto;
+}
+
+.game-header > div {
+    display: grid;
+    gap: 4px;
+}
+
+.game-header strong {
+    font-family: "STKaiti", "KaiTi", serif;
+    font-size: 1.55rem;
+}
+
+.eyebrow {
+    color: var(--muted);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+}
+
+.game-header a {
+    color: var(--ink);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+}
+
+main {
+    display: grid;
+    justify-items: center;
+    gap: 16px;
+    padding: 8px 12px 24px;
+}
+
+.game-shell {
+    position: relative;
+    width: min(540px, calc(100vw - 24px), calc((100dvh - 154px) * 0.5625));
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    background: #fffdf7;
+    border: 1px solid rgba(67, 48, 32, 0.32);
+    box-shadow: 0 18px 55px rgba(63, 43, 25, 0.18);
+}
+
+#unity-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fffdf7;
+}
+
+.loading {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    gap: 14px;
+    padding: 32px;
+    background:
+        linear-gradient(rgba(255, 250, 240, 0.92), rgba(255, 250, 240, 0.92)),
+        url("poster.png") center / cover;
+    text-align: center;
+    transition: opacity 300ms ease, visibility 300ms ease;
+}
+
+.loading.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.loading-title {
+    font-family: "STKaiti", "KaiTi", serif;
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+    font-weight: 700;
+}
+
+.progress-track {
+    width: min(280px, 68vw);
+    height: 7px;
+    overflow: hidden;
+    background: rgba(74, 53, 35, 0.15);
+    border-radius: 999px;
+}
+
+#progress-bar {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: var(--accent);
+    transition: width 120ms linear;
+}
+
+.loading small,
+.game-actions p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.loading.has-error .progress-track {
+    display: none;
+}
+
+.game-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    width: min(540px, calc(100% - 24px));
+}
+
+.game-actions p {
+    font-size: 0.78rem;
+}
+
+.game-actions button {
+    min-height: 40px;
+    padding: 0 16px;
+    color: var(--paper);
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    cursor: pointer;
+}
+
+.game-actions button:disabled {
+    cursor: wait;
+    opacity: 0.42;
+}
+
+@media (max-width: 560px) {
+    .game-header {
+        min-height: 72px;
+    }
+
+    .game-header strong {
+        font-size: 1.25rem;
+    }
+
+    .game-shell {
+        width: min(calc(100vw - 24px), calc((100dvh - 136px) * 0.5625));
+    }
+
+    main {
+        gap: 10px;
+        padding-top: 0;
+    }
+
+    .game-actions p {
+        display: none;
+    }
+
+    .game-actions {
+        justify-content: flex-end;
+    }
+}

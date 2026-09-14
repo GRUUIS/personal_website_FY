@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#eadfc9">
+    <title>纸间小日子 · Paper Days</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="game-header">
+        <div>
+            <span class="eyebrow">PAPER COLLAGE</span>
+            <strong>纸间小日子</strong>
+        </div>
+        <a href="../../#projects">返回作品集</a>
+    </header>
+
+    <main>
+        <section class="game-shell" aria-label="纸间小日子 WebGL 游戏">
+            <canvas id="unity-canvas" width="540" height="960" tabindex="-1"></canvas>
+            <div class="loading" id="loading">
+                <span class="loading-title" id="loading-title">正在展开报纸…</span>
+                <div class="progress-track" aria-hidden="true">
+                    <span id="progress-bar"></span>
+                </div>
+                <small id="progress-copy">首次加载约 44 MB</small>
+            </div>
+        </section>
+
+        <div class="game-actions">
+            <p>竖屏体验 · 建议开启声音</p>
+            <button id="fullscreen-button" type="button" disabled>全屏游玩</button>
+        </div>
+    </main>
+
+    <script>
+        const canvas = document.querySelector("#unity-canvas");
+        const loading = document.querySelector("#loading");
+        const progressBar = document.querySelector("#progress-bar");
+        const progressCopy = document.querySelector("#progress-copy");
+        const loadingTitle = document.querySelector("#loading-title");
+        const fullscreenButton = document.querySelector("#fullscreen-button");
+        const buildUrl = "Build";
+        const config = {
+            dataUrl: buildUrl + "/PaperDays.data",
+            frameworkUrl: buildUrl + "/PaperDays.framework.js",
+            codeUrl: buildUrl + "/PaperDays.wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "DefaultCompany",
+            productName: "Paper Days",
+            productVersion: "1.0"
+        };
+
+        const loader = document.createElement("script");
+        loader.src = buildUrl + "/PaperDays.loader.js";
+        loader.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+                const percent = Math.round(progress * 100);
+                progressBar.style.width = percent + "%";
+                progressCopy.textContent = "加载中 " + percent + "%";
+            }).then((instance) => {
+                loading.classList.add("is-hidden");
+                fullscreenButton.disabled = false;
+                fullscreenButton.addEventListener("click", () => instance.SetFullscreen(1));
+            }).catch((error) => {
+                console.error(error);
+                loadingTitle.textContent = "游戏加载失败";
+                progressCopy.textContent = "请刷新页面重试";
+                loading.classList.add("has-error");
+            });
+        };
+        document.body.appendChild(loader);
+    </script>
+</body>
+</html>
