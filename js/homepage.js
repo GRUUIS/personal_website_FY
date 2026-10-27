@@ -193,7 +193,7 @@
     }
 
     function setFilter(filter) {
-        filterButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.filter === filter));
+        filterButtons.forEach((button) => { button.classList.toggle("is-active", button.dataset.filter === filter); button.setAttribute("aria-pressed", String(button.dataset.filter === filter)); });
         projectCards.forEach((card) => {
             const values = card.dataset.category.split(" ");
             card.classList.toggle("is-hidden", filter !== "all" && !values.includes(filter));
