@@ -1,0 +1,608 @@
+{
+  "format": "system-planner-v1",
+  "name": "交互与状态 · 使用示例",
+  "boards": [
+    {
+      "id": "cf78bf3c",
+      "name": "签到首页",
+      "elements": [
+        {
+          "id": "75776299",
+          "type": "frame",
+          "name": "页面背景",
+          "x": 60,
+          "y": 30,
+          "w": 360,
+          "h": 600,
+          "text": "",
+          "fill": "#ffffff",
+          "stroke": "#c7d7cc",
+          "fontSize": 18,
+          "radius": 24,
+          "effect": "none",
+          "rule": {
+            "action": "",
+            "condition": "",
+            "result": "",
+            "status": "待确认"
+          },
+          "locked": true
+        },
+        {
+          "id": "761fb258",
+          "type": "text",
+          "name": "每日签到",
+          "x": 90,
+          "y": 66,
+          "w": 290,
+          "h": 55,
+          "text": "每日签到",
+          "fill": "#587060",
+          "stroke": "#afc3b7",
+          "fontSize": 27,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "",
+            "condition": "",
+            "result": "",
+            "status": "待确认"
+          }
+        },
+        {
+          "id": "6b9b7dfb",
+          "type": "text",
+          "name": "一个可以点起来的策划原型",
+          "x": 90,
+          "y": 115,
+          "w": 290,
+          "h": 55,
+          "text": "一个可以点起来的策划原型",
+          "fill": "#587060",
+          "stroke": "#afc3b7",
+          "fontSize": 13,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "",
+            "condition": "",
+            "result": "",
+            "status": "待确认"
+          }
+        },
+        {
+          "id": "e0c197a2",
+          "type": "rect",
+          "name": "奖励卡片背景",
+          "x": 94,
+          "y": 194,
+          "w": 288,
+          "h": 146,
+          "text": "",
+          "fill": "#eef4ef",
+          "stroke": "#d2dfd5",
+          "fontSize": 18,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "",
+            "condition": "",
+            "result": "",
+            "status": "待确认"
+          },
+          "groupId": "1ba187ba"
+        },
+        {
+          "id": "dff13170",
+          "type": "text",
+          "name": "今日奖励\n◇\n奖励内容待配置",
+          "x": 135,
+          "y": 211,
+          "w": 290,
+          "h": 55,
+          "text": "今日奖励\n◇\n奖励内容待配置",
+          "fill": "#587060",
+          "stroke": "#afc3b7",
+          "fontSize": 19,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "",
+            "condition": "",
+            "result": "",
+            "status": "待确认"
+          },
+          "groupId": "1ba187ba"
+        },
+        {
+          "id": "7bdfe296",
+          "type": "rect",
+          "name": "领取奖励",
+          "x": 94,
+          "y": 377,
+          "w": 288,
+          "h": 48,
+          "text": "领取奖励",
+          "fill": "#587b6c",
+          "stroke": "#afc3b7",
+          "fontSize": 16,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "点击领取奖励",
+            "condition": "此状态可用",
+            "result": "见点击交互配置",
+            "status": "候选方案"
+          },
+          "textColor": "#ffffff",
+          "interaction": {
+            "type": "setState",
+            "targetStateId": "14b06638"
+          }
+        },
+        {
+          "id": "2e3b2768",
+          "type": "rect",
+          "name": "奖励说明",
+          "x": 94,
+          "y": 443,
+          "w": 288,
+          "h": 48,
+          "text": "奖励说明",
+          "fill": "#87a592",
+          "stroke": "#afc3b7",
+          "fontSize": 16,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "点击奖励说明",
+            "condition": "此状态可用",
+            "result": "见点击交互配置",
+            "status": "候选方案"
+          },
+          "textColor": "#ffffff",
+          "interaction": {
+            "type": "openOverlay",
+            "targetBoardId": "dbb86d2f",
+            "targetStateId": "default"
+          }
+        },
+        {
+          "id": "e4db2c94",
+          "type": "rect",
+          "name": "查看记录",
+          "x": 94,
+          "y": 509,
+          "w": 288,
+          "h": 48,
+          "text": "查看记录",
+          "fill": "#9eaca3",
+          "stroke": "#afc3b7",
+          "fontSize": 16,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "点击查看记录",
+            "condition": "此状态可用",
+            "result": "见点击交互配置",
+            "status": "候选方案"
+          },
+          "textColor": "#ffffff",
+          "interaction": {
+            "type": "navigate",
+            "targetBoardId": "8774b6b5",
+            "targetStateId": "default"
+          }
+        }
+      ],
+      "states": [
+        {
+          "id": "14b06638",
+          "name": "已领取",
+          "elements": [
+            {
+              "id": "75776299",
+              "type": "frame",
+              "name": "页面背景",
+              "x": 60,
+              "y": 30,
+              "w": 360,
+              "h": 600,
+              "text": "",
+              "fill": "#ffffff",
+              "stroke": "#c7d7cc",
+              "fontSize": 18,
+              "radius": 24,
+              "effect": "none",
+              "rule": {
+                "action": "",
+                "condition": "",
+                "result": "",
+                "status": "待确认"
+              },
+              "locked": true
+            },
+            {
+              "id": "761fb258",
+              "type": "text",
+              "name": "每日签到",
+              "x": 90,
+              "y": 66,
+              "w": 290,
+              "h": 55,
+              "text": "每日签到",
+              "fill": "#587060",
+              "stroke": "#afc3b7",
+              "fontSize": 27,
+              "radius": 12,
+              "effect": "none",
+              "rule": {
+                "action": "",
+                "condition": "",
+                "result": "",
+                "status": "待确认"
+              }
+            },
+            {
+              "id": "6b9b7dfb",
+              "type": "text",
+              "name": "一个可以点起来的策划原型",
+              "x": 90,
+              "y": 115,
+              "w": 290,
+              "h": 55,
+              "text": "一个可以点起来的策划原型",
+              "fill": "#587060",
+              "stroke": "#afc3b7",
+              "fontSize": 13,
+              "radius": 12,
+              "effect": "none",
+              "rule": {
+                "action": "",
+                "condition": "",
+                "result": "",
+                "status": "待确认"
+              }
+            },
+            {
+              "id": "e0c197a2",
+              "type": "rect",
+              "name": "奖励卡片背景",
+              "x": 94,
+              "y": 194,
+              "w": 288,
+              "h": 146,
+              "text": "",
+              "fill": "#eef4ef",
+              "stroke": "#d2dfd5",
+              "fontSize": 18,
+              "radius": 12,
+              "effect": "none",
+              "rule": {
+                "action": "",
+                "condition": "",
+                "result": "",
+                "status": "待确认"
+              },
+              "groupId": "1ba187ba"
+            },
+            {
+              "id": "dff13170",
+              "type": "text",
+              "name": "今日奖励\n◇\n奖励内容待配置",
+              "x": 135,
+              "y": 211,
+              "w": 290,
+              "h": 55,
+              "text": "今日奖励\n◇\n奖励内容待配置",
+              "fill": "#587060",
+              "stroke": "#afc3b7",
+              "fontSize": 19,
+              "radius": 12,
+              "effect": "none",
+              "rule": {
+                "action": "",
+                "condition": "",
+                "result": "",
+                "status": "待确认"
+              },
+              "groupId": "1ba187ba"
+            },
+            {
+              "id": "7bdfe296",
+              "type": "rect",
+              "name": "领取奖励",
+              "x": 94,
+              "y": 377,
+              "w": 288,
+              "h": 48,
+              "text": "已领取",
+              "fill": "#a0aaa4",
+              "stroke": "#afc3b7",
+              "fontSize": 16,
+              "radius": 12,
+              "effect": "none",
+              "rule": {
+                "action": "点击领取奖励",
+                "condition": "此状态可用",
+                "result": "见点击交互配置",
+                "status": "候选方案"
+              },
+              "textColor": "#ffffff",
+              "interaction": {
+                "type": "none"
+              },
+              "disabled": true
+            },
+            {
+              "id": "2e3b2768",
+              "type": "rect",
+              "name": "奖励说明",
+              "x": 94,
+              "y": 443,
+              "w": 288,
+              "h": 48,
+              "text": "奖励说明",
+              "fill": "#87a592",
+              "stroke": "#afc3b7",
+              "fontSize": 16,
+              "radius": 12,
+              "effect": "none",
+              "rule": {
+                "action": "点击奖励说明",
+                "condition": "此状态可用",
+                "result": "见点击交互配置",
+                "status": "候选方案"
+              },
+              "textColor": "#ffffff",
+              "interaction": {
+                "type": "openOverlay",
+                "targetBoardId": "dbb86d2f",
+                "targetStateId": "default"
+              }
+            },
+            {
+              "id": "e4db2c94",
+              "type": "rect",
+              "name": "查看记录",
+              "x": 94,
+              "y": 509,
+              "w": 288,
+              "h": 48,
+              "text": "查看记录",
+              "fill": "#9eaca3",
+              "stroke": "#afc3b7",
+              "fontSize": 16,
+              "radius": 12,
+              "effect": "none",
+              "rule": {
+                "action": "点击查看记录",
+                "condition": "此状态可用",
+                "result": "见点击交互配置",
+                "status": "候选方案"
+              },
+              "textColor": "#ffffff",
+              "interaction": {
+                "type": "navigate",
+                "targetBoardId": "8774b6b5",
+                "targetStateId": "default"
+              }
+            }
+          ],
+          "note": "领取完成后，领取按钮显示“已领取”并不可点击。其他入口保持可用。"
+        }
+      ],
+      "note": "示例状态，奖励数值、刷新时间和实际资格规则均待确认。"
+    },
+    {
+      "id": "dbb86d2f",
+      "name": "奖励说明弹窗",
+      "elements": [
+        {
+          "id": "b9cdb5e8",
+          "type": "frame",
+          "name": "弹窗背景",
+          "x": 0,
+          "y": 0,
+          "w": 300,
+          "h": 240,
+          "text": "",
+          "fill": "#ffffff",
+          "stroke": "#afc3b7",
+          "fontSize": 18,
+          "radius": 20,
+          "effect": "none",
+          "rule": {
+            "action": "",
+            "condition": "",
+            "result": "",
+            "status": "待确认"
+          },
+          "locked": true
+        },
+        {
+          "id": "c410980b",
+          "type": "text",
+          "name": "奖励说明",
+          "x": 30,
+          "y": 24,
+          "w": 290,
+          "h": 55,
+          "text": "奖励说明",
+          "fill": "#587060",
+          "stroke": "#afc3b7",
+          "fontSize": 23,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "",
+            "condition": "",
+            "result": "",
+            "status": "待确认"
+          }
+        },
+        {
+          "id": "30554c04",
+          "type": "text",
+          "name": "这里用于演示弹窗。\n正式奖励规则需要策划填写。",
+          "x": 22,
+          "y": 82,
+          "w": 290,
+          "h": 55,
+          "text": "这里用于演示弹窗。\n正式奖励规则需要策划填写。",
+          "fill": "#587060",
+          "stroke": "#afc3b7",
+          "fontSize": 14,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "",
+            "condition": "",
+            "result": "",
+            "status": "待确认"
+          }
+        },
+        {
+          "id": "66f9edc7",
+          "type": "rect",
+          "name": "知道了",
+          "x": 40,
+          "y": 170,
+          "w": 220,
+          "h": 48,
+          "text": "知道了",
+          "fill": "#587b6c",
+          "stroke": "#afc3b7",
+          "fontSize": 16,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "点击知道了",
+            "condition": "此状态可用",
+            "result": "见点击交互配置",
+            "status": "候选方案"
+          },
+          "textColor": "#ffffff",
+          "interaction": {
+            "type": "closeOverlay"
+          }
+        }
+      ]
+    },
+    {
+      "id": "8774b6b5",
+      "name": "领取记录",
+      "elements": [
+        {
+          "id": "611050dd",
+          "type": "frame",
+          "name": "页面背景",
+          "x": 60,
+          "y": 30,
+          "w": 360,
+          "h": 600,
+          "text": "",
+          "fill": "#ffffff",
+          "stroke": "#c7d7cc",
+          "fontSize": 18,
+          "radius": 24,
+          "effect": "none",
+          "rule": {
+            "action": "",
+            "condition": "",
+            "result": "",
+            "status": "待确认"
+          },
+          "locked": true
+        },
+        {
+          "id": "46cacb84",
+          "type": "text",
+          "name": "领取记录",
+          "x": 90,
+          "y": 68,
+          "w": 290,
+          "h": 55,
+          "text": "领取记录",
+          "fill": "#587060",
+          "stroke": "#afc3b7",
+          "fontSize": 26,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "",
+            "condition": "",
+            "result": "",
+            "status": "待确认"
+          }
+        },
+        {
+          "id": "a4c46f42",
+          "type": "text",
+          "name": "暂无更多记录\n\n此页面用于演示跳转与返回。",
+          "x": 90,
+          "y": 170,
+          "w": 290,
+          "h": 55,
+          "text": "暂无更多记录\n\n此页面用于演示跳转与返回。",
+          "fill": "#587060",
+          "stroke": "#afc3b7",
+          "fontSize": 17,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "",
+            "condition": "",
+            "result": "",
+            "status": "待确认"
+          }
+        },
+        {
+          "id": "e1b2ffaa",
+          "type": "rect",
+          "name": "返回上一页",
+          "x": 94,
+          "y": 510,
+          "w": 288,
+          "h": 48,
+          "text": "返回上一页",
+          "fill": "#587b6c",
+          "stroke": "#afc3b7",
+          "fontSize": 16,
+          "radius": 12,
+          "effect": "none",
+          "rule": {
+            "action": "点击返回上一页",
+            "condition": "此状态可用",
+            "result": "见点击交互配置",
+            "status": "候选方案"
+          },
+          "textColor": "#ffffff",
+          "interaction": {
+            "type": "back"
+          }
+        }
+      ]
+    }
+  ],
+  "mind": [
+    {
+      "id": "root",
+      "parent": null,
+      "text": "系统结构",
+      "x": 120,
+      "y": 260
+    }
+  ],
+  "mermaid": "flowchart TD\n  A[系统入口] --> B[主界面]\n  B --> C{满足操作条件？}\n  C -->|是| D[执行操作]\n  D --> E[更新状态并反馈]\n  C -->|否| F[提示未满足条件]\n  E --> B\n  F --> B",
+  "sections": {
+    "purpose": "【使用示例】演示布局组合、状态切换、弹窗、跳转和返回。所有规则都是候选方案。",
+    "overview": "首页 → 领取后状态；首页 → 奖励说明弹窗；首页 → 领取记录 → 返回。",
+    "rules": "点击领取奖励切换到“已领取”状态。已领取状态下领取按钮不可点击。预览过程不会修改设计稿。",
+    "support": "",
+    "parameters": "",
+    "questions": "奖励配置、领取资格、周期刷新、红点规则待确认。",
+    "acceptance": ""
+  },
+  "createdAt": "2026-09-24T10:16:41.279Z"
+}
