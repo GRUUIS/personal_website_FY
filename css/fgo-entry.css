@@ -1,0 +1,13 @@
+/* A restrained bridge from the portfolio's editorial style to the FGO study. */
+.portfolio-update{--bg:#f5f7f8;--accent:#647f91;background:var(--bg)}
+.portfolio-update .project-card.fgo-project{border-color:#b8c6d0;background:#f1f5f7}
+.fgo-project .fgo-cover{position:relative;aspect-ratio:16/10;overflow:hidden;background:radial-gradient(ellipse at 70% 40%,#365674,#101f32 70%);padding:25px;color:#e5c58b;display:flex;align-items:center}
+.fgo-project .fgo-cover:before{content:'';width:75%;aspect-ratio:1;border:1px solid #d6b77b55;border-radius:50%;position:absolute;right:-15%;top:-15%}
+.fgo-project .fgo-cover>span{font-size:clamp(27px,3vw,45px);line-height:1.2;letter-spacing:-.03em;z-index:2;font-family:Georgia,serif;max-width:48%}
+.portfolio-update .fgo-project .fgo-cover img{position:absolute;width:34%;height:86%;aspect-ratio:auto;object-fit:cover;right:8%;top:7%;transform:rotate(9deg);border:1px solid #d1b47a;box-shadow:0 15px 25px #0005}
+.portfolio-update .fgo-project .project-type{color:#45647a}
+.fgo-research-entry{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;padding:35px;background:#122238;color:#eaf0f4;margin:36px 0;border:1px solid #bfa16d;border-radius:5px}
+.fgo-research-entry h2{font-size:30px;margin:10px 0 18px}.fgo-research-entry p{color:#aebed0;font-size:14px;line-height:1.9}.fgo-research-entry small{color:#dfc38d;letter-spacing:.15em}
+.fgo-research-entry .research-links{display:flex;flex-direction:column;justify-content:center;gap:16px;font-size:13px}.fgo-research-entry a{border:1px solid #7c7159;padding:13px 18px;color:#e1c995}.fgo-research-entry a:hover{background:#2a4055}
+.fgo-culture-link{font-size:12px!important;display:inline-block;margin-top:8px;color:#3e627b!important;text-decoration:underline!important;text-underline-offset:4px}
+@media(max-width:700px){.fgo-research-entry{grid-template-columns:1fr;padding:24px;gap:15px}.fgo-research-entry h2{font-size:26px}}

@@ -1,0 +1,218 @@
+[
+  {
+    "id": 100100,
+    "collectionNo": 2,
+    "nameZh": "阿尔托莉雅·潘德拉贡",
+    "nameEn": "Altria Pendragon",
+    "className": "saber",
+    "rarity": 5,
+    "cards": [
+      "Quick",
+      "Arts",
+      "Arts",
+      "Buster",
+      "Buster"
+    ],
+    "npName": "Excalibur",
+    "npType": "Anti-Fortress",
+    "npCard": "Buster",
+    "cardImages": [
+      "../image/fgo/saber-1.jpg",
+      "../image/fgo/saber-2.jpg",
+      "../image/fgo/saber-3.jpg"
+    ],
+    "cardImageSources": [
+      "https://static.atlasacademy.io/NA/CharaGraph/100100/100100a@1.png",
+      "https://static.atlasacademy.io/NA/CharaGraph/100100/100100a@2.png",
+      "https://static.atlasacademy.io/NA/CharaGraph/100100/100100b@1.png"
+    ],
+    "source": "https://api.atlasacademy.io/nice/NA/servant/2",
+    "analysisZh": "分析：同一角色的再临卡面变化，把数值成长转化成可感知的视觉进展。"
+  },
+  {
+    "id": 200100,
+    "collectionNo": 11,
+    "nameZh": "卫宫",
+    "nameEn": "Emiya",
+    "className": "archer",
+    "rarity": 4,
+    "cards": [
+      "Quick",
+      "Arts",
+      "Arts",
+      "Arts",
+      "Buster"
+    ],
+    "npName": "Unlimited Blade Works",
+    "npType": "????",
+    "npCard": "Buster",
+    "cardImages": [
+      "../image/fgo/archer-1.jpg"
+    ],
+    "cardImageSources": [
+      "https://static.atlasacademy.io/NA/CharaGraph/200100/200100a@1.png"
+    ],
+    "source": "https://api.atlasacademy.io/nice/NA/servant/11",
+    "analysisZh": "分析：职阶相性只决定一层匹配，指令卡组成与宝具仍会影响队伍搭配。"
+  },
+  {
+    "id": 300100,
+    "collectionNo": 17,
+    "nameZh": "库·丘林",
+    "nameEn": "Cú Chulainn",
+    "className": "lancer",
+    "rarity": 3,
+    "cards": [
+      "Quick",
+      "Quick",
+      "Arts",
+      "Buster",
+      "Buster"
+    ],
+    "npName": "Gáe Bolg",
+    "npType": "Anti-Personnel",
+    "npCard": "Quick",
+    "cardImages": [
+      "../image/fgo/lancer-1.jpg"
+    ],
+    "cardImageSources": [
+      "https://static.atlasacademy.io/NA/CharaGraph/300100/300100a@1.png"
+    ],
+    "source": "https://api.atlasacademy.io/nice/NA/servant/17",
+    "analysisZh": "分析：低稀有度角色也可以成为明确的功能选择，不能用星级替代战斗定位。"
+  },
+  {
+    "id": 400100,
+    "collectionNo": 23,
+    "nameZh": "美杜莎",
+    "nameEn": "Medusa",
+    "className": "rider",
+    "rarity": 3,
+    "cards": [
+      "Quick",
+      "Quick",
+      "Arts",
+      "Arts",
+      "Buster"
+    ],
+    "npName": "Bellerophon",
+    "npType": "Anti-Army",
+    "npCard": "Quick",
+    "cardImages": [
+      "../image/fgo/rider-1.jpg"
+    ],
+    "cardImageSources": [
+      "https://static.atlasacademy.io/NA/CharaGraph/400100/400100a@1.png"
+    ],
+    "source": "https://api.atlasacademy.io/nice/NA/servant/23",
+    "analysisZh": "分析：相同稀有度下仍存在不同职阶与卡组，使收集扩展为阵容覆盖问题。"
+  },
+  {
+    "id": 500100,
+    "collectionNo": 31,
+    "nameZh": "美狄亚",
+    "nameEn": "Medea",
+    "className": "caster",
+    "rarity": 3,
+    "cards": [
+      "Quick",
+      "Arts",
+      "Arts",
+      "Arts",
+      "Buster"
+    ],
+    "npName": "Rule Breaker",
+    "npType": "Anti-Magecraft",
+    "npCard": "Arts",
+    "cardImages": [
+      "../image/fgo/caster-1.jpg"
+    ],
+    "cardImageSources": [
+      "https://static.atlasacademy.io/NA/CharaGraph/500100/500100a@1.png"
+    ],
+    "source": "https://api.atlasacademy.io/nice/NA/servant/31",
+    "analysisZh": "分析：三张 Arts 将卡组特征直接呈现给玩家，帮助形成关于使用方式的初步预期。"
+  },
+  {
+    "id": 600100,
+    "collectionNo": 39,
+    "nameZh": "佐佐木小次郎",
+    "nameEn": "Sasaki Kojirou",
+    "className": "assassin",
+    "rarity": 1,
+    "cards": [
+      "Quick",
+      "Quick",
+      "Quick",
+      "Arts",
+      "Buster"
+    ],
+    "npName": "Swallow Reversal",
+    "npType": "Anti-Personnel Mystic Sword",
+    "npCard": "Quick",
+    "cardImages": [
+      "../image/fgo/assassin-1.jpg"
+    ],
+    "cardImageSources": [
+      "https://static.atlasacademy.io/NA/CharaGraph/600100/600100a@1.png"
+    ],
+    "source": "https://api.atlasacademy.io/nice/NA/servant/39",
+    "analysisZh": "分析：三张 Quick 体现卡组差异；具体表现还要结合技能、命中数与队伍环境。"
+  },
+  {
+    "id": 700100,
+    "collectionNo": 47,
+    "nameZh": "赫拉克勒斯",
+    "nameEn": "Heracles",
+    "className": "berserker",
+    "rarity": 4,
+    "cards": [
+      "Quick",
+      "Arts",
+      "Buster",
+      "Buster",
+      "Buster"
+    ],
+    "npName": "Nine Lives",
+    "npType": "Unknown",
+    "npCard": "Buster",
+    "cardImages": [
+      "../image/fgo/berserker-1.jpg"
+    ],
+    "cardImageSources": [
+      "https://static.atlasacademy.io/NA/CharaGraph/700100/700100a@1.png"
+    ],
+    "source": "https://api.atlasacademy.io/nice/NA/servant/47",
+    "analysisZh": "分析：Berserker 的相性设计引入输出与生存的权衡，选人不只是寻找单一优势。"
+  },
+  {
+    "id": 800100,
+    "collectionNo": 1,
+    "nameZh": "玛修·基列莱特",
+    "nameEn": "Mash Kyrielight",
+    "className": "shielder",
+    "rarity": 4,
+    "cards": [
+      "Quick",
+      "Arts",
+      "Arts",
+      "Buster",
+      "Buster"
+    ],
+    "npName": "???",
+    "npType": "Unknown",
+    "npCard": "Arts",
+    "cardImages": [
+      "../image/fgo/shielder-1.jpg",
+      "../image/fgo/shielder-2.jpg",
+      "../image/fgo/shielder-3.jpg"
+    ],
+    "cardImageSources": [
+      "https://static.atlasacademy.io/NA/CharaGraph/800100/800100a@1.png",
+      "https://static.atlasacademy.io/NA/CharaGraph/800100/800100a@2.png",
+      "https://static.atlasacademy.io/NA/CharaGraph/800100/800100b@1.png"
+    ],
+    "source": "https://api.atlasacademy.io/nice/NA/servant/1",
+    "analysisZh": "分析：角色外观、故事进度与战斗能力共同承载成长，让陪伴感拥有可见的节点。"
+  }
+]
